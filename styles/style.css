@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/Storm-Hercules-Bold.otf') format('herbold'),
+    url('../fonts/Storm-Hercules-BoldItalic.otf') format('herbolditalic'),
+    url('../fonts/Storm-Hercules-Italic.otf') format('heritalic'),
+    url('../fonts/Storm-Hercules.otf') format('her') 
+}
+/* Universal Styles */ 
+html {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; 
+}
+
+h2 {
+    color: #C78D67;
+    font-size: 2vw;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.topcontainer {
+    background-image:  url("../images/hometop.png");
+    text-align:center;
+}
+/*style for nav list */
+.header li {
+    display: inline-block; 
+    padding-right: 3vw;
+    padding-top: 1vw;
+    font-family: MyFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3vw;
+    line-height: 3vw;
+}
+
+.header a {
+    color: #421E0E; 
+    text-decoration:none; /* remove the under line of href in nav*/
+}
+
+#profile {
+    width: 4vw;
+    height: 4vw;
+}
+
+#cart {
+    width: 5vw;
+    height: 5vw;
+}
+
+#arrow {
+    max-width: 100%;
+}
+.pagelinkimg {
+    margin-left: 20vw;
+}
+
+.bigname {
+    font-family: Sofia Pro Soft;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 6vw;
+    font-size: 6vw;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.describle {
+    font-family: Hercules;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.75vw;
+    letter-spacing: -0.015em;
+    color: #C78F74;
+    padding-left: 200px;
+}
+
+.spec-text{
+    color:black;
+}
+
+.left-section {
+    float:left;
+    height: 30%;
+    width: 30%;
+    text-align: right;
+}
+
+.right-section {
+    float:left;
+    height: 30%;
+    width: 60%;
+}
+
+.split-div {
+    clear:both;
+    background-color:black;
+}
+
+/* for 3 columns */
+.column1{
+    float:left;
+    width:33.33333%;
+    height:30vw;
+    text-align:center;
+}
+.column2{
+    float:left;
+    width:33.33333%;
+    height:30vw;
+    text-align:center;
+}
+.column3{
+    float:left;
+    width:33.33333%;
+    height:30vw;
+    text-align:center;
+}  
+.threecolumns img {
+    max-width: 100%;
+    width: 80%;
+}
+footer{
+    clear:both;
+    background-color:black;
+}

@@ -12,16 +12,24 @@
     <div class='container'>
         <div class="topcontainer">
             <nav class='header'>
-                <ul>
-                    <li><a class='home' href='#top'>Home</a></li>
-                    <li><a class='pagelink' href='#serif'>News</a></li>
-                    <li><a class='pagelink' href='#sans'>Shop</a></li>
-                    <li><a class='pagelink' href='#mono'>Map</a></li>
-                    <li><a class='pagelinkimg' href='#mono'><img id="profile" src="images/profile.png"
-                                alt="my profile"></a></li>
-                    <li><a class='pagelinkimg2' href='#mono'> <img id="cart" src="images/cart.png" alt="my cart"></a>
-                    </li>
-                </ul>
+                <div class="leftmenu">
+                    <ul class="homemenu">
+                        <li><a class='home' href='./index.html'>Home</a></li>
+                        <li><a class='pagelink' href='./'>News</a></li>
+                        <li><a class='pagelink' href='./productlist.html'>Shop</a></li>
+                        <li><a class='pagelink' href='./productlist.html'>Map</a></li>
+                    </ul>
+                </div>
+                <div class="rightmenu">
+                    <ul class="cartmenu">
+                        <li><a class='pagelinkimg' href='#mono'><img id="profile" src="images/profile.png"
+                                    alt="my profile"></a></li>
+                        <li><a class='pagelinkimg2' href='#mono'> <img id="cart" src="images/cart.png"
+                                    alt="my cart"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="split-div"></div>
             </nav>
             <p class="bigname">BON <br> BON </p>
             <a href=""><img id="arrow" src="images/downarrow.png" alt="GoDown"> </a>
@@ -32,28 +40,56 @@
                 <img id="huafubing" src="images/huafubing.png" alt="huafubing">
             </section>
             <section class="right-section">
-                <div class="describle"> 
+                <div class="describle">
                     <p>
-                        We are a small bakery that stated in  <br>2002. We specializes in <span class="spec-text">cinnamon rolls</span>, <br>
-                        from our famous original cinnamon rolls<br>to a variety of <span class="spec-text">artisan flavors</span>.
+                        We are a small bakery that stated in 2002. We specializes in 
+                        <span class="spec-text">cinnamon rolls</span>, 
+                        from our famous original cinnamon rolls to a variety of
+                        <span class="spec-text">artisan flavors</span>.
                     </p>
                 </div>
             </section>
         </div>
         <div class="split-div"></div>
+        <div class="empty-div"></div>
         <div class="threecolumns">
-            <div class="column1">
-                <img src="images/events.png" alt="events" width="" height="">
+            <div class="three-column-1">
+                <div class="menu-icon">
+                    <img src="./images/events.png" width="100%" alt="">
+                    <span class="menu-icon-title"><span class="home-three-column-text">News <br>&  Events</span></span>
+                    <img class="menu-hover-display" src="./images/backgroud-yellow.png" width="100%" alt="">
+                </div>
             </div>
-            <div class="column2">
-                <img src="images/shop.png" alt="shop" width="" height="" >
+            <div class="three-column-1">
+                <div class="menu-icon">
+                    <img src="./images/shop.png" width="100%" alt="">
+                    <span class="menu-icon-title"><span class="home-three-column-text">Shop</span></span>
+                    <img class="menu-hover-display" src="./images/backgroud-yellow2.png" width="100%" alt="">
+                </div>
             </div>
-            <div class="column3">
-                <img src="images/map.png" alt="map" width="" height="">
+            <div class="three-column-1">
+                <div class="menu-icon">
+                    <img src="./images/map.png" width="100%" alt="">
+                    <span class="menu-icon-title"><span class="home-three-column-text">Map</span></span>
+                    <img class="menu-hover-display" src="./images/backgroud-yellow3.png" width="100%" alt="">
+                </div>
             </div>
         </div>
+        <div class="split-div"></div>
+        <div class="empty-div"></div>
         <footer>
-            Copyright  SIuy
+            <h1>BONBON</h1>
+            <p> Want to know our latest sales and news?</p>
+            <input type="text"> <button> Subscribe</button>
+            <div class="footer-small-text">
+                <div class="leftmenu">
+                © 2003-2021 BonBonBake, All rights reserved 
+                </div>
+                <div class="rightmenu">
+                website by Jenny Shuyu Liu (shuyul1)
+                </div>
+                <div class="split-div"></div>
+            </div>
         </footer>
     </div>
 </body>

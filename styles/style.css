@@ -3,23 +3,42 @@
     src: url('../fonts/Storm-Hercules-Bold.otf') format('herbold'),
     url('../fonts/Storm-Hercules-BoldItalic.otf') format('herbolditalic'),
     url('../fonts/Storm-Hercules-Italic.otf') format('heritalic'),
-    url('../fonts/Storm-Hercules.otf') format('her') 
+    url('../fonts/Storm-Hercules.otf') format('her');
+    font-display:auto;font-style:italic;font-weight:500;
 }
 /* Universal Styles */ 
 html {
-    font-size: 16px;
-    font-family: 'Arial', sans-serif; 
+    font-family: sofia-pro-soft;
 }
 
+h1 {
+    color: white;
+}
 h2 {
     color: #C78D67;
     font-size: 2vw;
 }
+h3 {
+    color: #C78D67;
+    font-size: 1.5vw;
+}
+h4 {
+    color: #C78D67;
+    font-size: 1vw;
+}
+hr {
+    border:none;
+    border-top-width:2px;
+    border-top-style:solid;
+    color: #c78d67;
+}
+/*for page style*/
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
+/*for home top container*/
 .topcontainer {
     background-image:  url("../images/hometop.png");
     text-align:center;
@@ -27,61 +46,70 @@ h2 {
 /*style for nav list */
 .header li {
     display: inline-block; 
-    padding-right: 3vw;
-    padding-top: 1vw;
-    font-family: MyFont;
+    padding-right: 2vw;
+    padding-top: 0.5vw;
     font-style: normal;
     font-weight: normal;
-    font-size: 3vw;
-    line-height: 3vw;
+    font-size: calc(15px + 1vw);
 }
 
-.header a {
+a {
     color: #421E0E; 
     text-decoration:none; /* remove the under line of href in nav*/
 }
 
+/* .header a:hover {
+    text-decoration: 1px solid #421E0E;
+} */
+
+/*let home menu align left*/
+.leftmenu {
+    float: left;
+}
+/*let cart menu align left*/
+.rightmenu {
+    float: right;
+} 
+
 #profile {
-    width: 4vw;
-    height: 4vw;
+    width: 30px;
+    height: 30px;
 }
 
 #cart {
-    width: 5vw;
-    height: 5vw;
+    width: 30px;
+    height: 30px;
 }
 
 #arrow {
     max-width: 100%;
 }
-.pagelinkimg {
-    margin-left: 20vw;
-}
-
+/*styles for text*/
 .bigname {
-    font-family: Sofia Pro Soft;
     font-style: normal;
     font-weight: normal;
-    line-height: 6vw;
-    font-size: 6vw;
+    line-height: calc(40px + 1vw);
+    font-size: calc(40px + 1vw);
     text-align: center;
     color: #FFFFFF;
+    font-weight: bolder;
 }
 
 .describle {
-    font-family: Hercules;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.75vw;
+    font-size: calc(10px + 1vw);;
     letter-spacing: -0.015em;
     color: #C78F74;
     padding-left: 200px;
+    font-family: MyFont;
 }
 
 .spec-text{
     color:black;
 }
 
+/*for two columns sections*/
 .left-section {
     float:left;
     height: 30%;
@@ -95,35 +123,131 @@ h2 {
     width: 60%;
 }
 
-.split-div {
-    clear:both;
-    background-color:black;
+.two-column-half {
+    float:left;
+    width: 49%;
 }
 
-/* for 3 columns */
-.column1{
+
+/*for two columns section in product page*/
+
+.left-section-20 {
     float:left;
-    width:33.33333%;
-    height:30vw;
-    text-align:center;
+    width: 19%;
 }
-.column2{
+
+.right-section-80 {
     float:left;
-    width:33.33333%;
-    height:30vw;
-    text-align:center;
+    width: 75%;
+    margin-left: 10px;
+    padding: 10px;
+    border-left: 1px solid #421E0E;
 }
-.column3{
+
+.split-div {
+    clear:both;
+}
+
+.empty-div {
+    height: 30px;
+    width: 100%;
+    /* border: 1px solid #421E0E; */
+}
+ 
+.three-column-1 {
     float:left;
-    width:33.33333%;
-    height:30vw;
-    text-align:center;
-}  
-.threecolumns img {
-    max-width: 100%;
+    width:32%;
+    padding: 2px;
+}
+/* stype for the circle icon and it text*/
+.menu-icon {
+    position: relative; 
     width: 80%;
+    text-align: center;
 }
+
+.menu-icon-title {
+    position: absolute; 
+    top: 30%; 
+    left: 30%;
+    font-size: calc(15px + 0.5vw);
+    font-family: Sofia Pro Soft;
+    font-weight: bolder;
+    color: #421E0E;
+}
+.menu-hover-display {
+    position: absolute; 
+    top: 0%; 
+    left: 0%;
+    display: none;
+}
+.menu-hover-button {
+    top: 40%; 
+    left: 20%;
+    background-color: #f04c36;
+    font-weight: bolder;
+}
+
+.menu-icon:hover .menu-icon-title {
+    display: none;
+}
+.menu-icon:hover .menu-hover-display {
+    display: block;
+}
+
+.home-three-column-text {
+    font-size: 2vw;
+    color: #FFFFFF;
+    font-weight: bolder;
+} 
+
+/*footer style*/
 footer{
     clear:both;
-    background-color:black;
+    background-color:#E0C8C6;
+    padding-left: 2%;
+    font-size: 25px;
+}
+.footer-small-text{
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/*style for components*/
+input[type=text]{
+    background: rgba(255, 255, 255, 0.17);
+    border: 1px solid #421E0E;
+    box-sizing: border-box;
+    height: 35px;
+    width: 200px;
+}
+button {
+    background: #D15B5E;
+    border: 1px solid #421E0E;
+    box-sizing: border-box;
+    height: 35px;
+    width: calc(90px + 1vw);
+    color: #FFFFFF;
+}
+
+select {
+    box-sizing: border-box;
+    height: 35px;
+    width: calc(90px + 1vw);
+}
+
+/*style for filter input*/
+.filter-div {
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: calc(5px + 1vw);
+}
+.rating {
+    background: rgba(224, 200, 198, 0.5);
+    margin: 20px;
+    padding: 2px;
+}
+
+.bolder-text{
+    font-weight: bolder;
 }

@@ -1,40 +1,93 @@
+/*use font face to set the Hercules font, including bold and Italic style*/
 @font-face {
-    font-family: 'MyFont';
-    src: url('../fonts/Storm-Hercules-Bold.otf') format('herbold'),
-    url('../fonts/Storm-Hercules-BoldItalic.otf') format('herbolditalic'),
-    url('../fonts/Storm-Hercules-Italic.otf') format('heritalic'),
-    url('../fonts/Storm-Hercules.otf') format('her');
-    font-display:auto;font-style:italic;font-weight:500;
+    font-family: 'Hercules';
+    src:     
+    url('../fonts/Storm-Hercules.otf');
+    font-display:auto;font-style:normal;font-weight:normal;
 }
+
+@font-face {
+    font-family: 'Hercules';
+    src:url('../fonts/Storm-Hercules-Bold.otf');
+    font-display:auto;font-style:normal;font-weight:bold;
+}
+
+@font-face {
+    font-family: 'Hercules';
+    src:url('../fonts/Storm-Hercules-BoldItalic.otf');
+    font-display:auto;font-style:italic;font-weight:bold;
+}
+
+@font-face {
+    font-family: 'Hercules';
+    src: url('../fonts/Storm-Hercules-Italic.otf');
+    font-display:auto;font-style:italic;font-weight:normal;
+}
+/*end of font face */
+
 /* Universal Styles */ 
 html {
     font-family: sofia-pro-soft;
+    color: #421E0E;
 }
 
-h1 {
-    color: white;
-}
 h2 {
     color: #C78D67;
-    font-size: 2vw;
+    font-size: calc(40px + 0.5vw);
 }
+
 h3 {
-    color: #C78D67;
-    font-size: 1.5vw;
+    font-size: 35px;
 }
+
 h4 {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
     color: #C78D67;
-    font-size: 1vw;
+}
+
+
+.mid-head-font {
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: bold;
+    color: #421E0E;
+    padding-bottom: 20px;
+}
+.mappage-describle li {
+    font-weight: bold;
+}
+.map-mid-head-font {
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #C78F74
+}
+
+.large-head-font {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #421E0E;
+    padding-bottom: 20px;
 }
 hr {
     border:none;
-    border-top-width:2px;
+    border-top-width:1px;
     border-top-style:solid;
     color: #c78d67;
 }
-/*for page style*/
+/*set all img's width*/
+img {
+    max-width: 100%;
+}
+
+/*for whole page style, make content at center*/
 .container {
-    max-width: 1000px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -43,46 +96,78 @@ hr {
     background-image:  url("../images/hometop.png");
     text-align:center;
 }
+
+.header {
+    left: 0px;
+    top: -1px;
+    background: #E0C8C6;
+    border-radius:  0px 0px 40px 40px;
+}
 /*style for nav list */
 .header li {
     display: inline-block; 
     padding-right: 2vw;
     padding-top: 0.5vw;
+    font-family: sofia-pro-soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calc(16px + 1vw);
+    color: #421E0E;
+}
+
+/** set styles for back to page link*/
+.backlink a{
+    font-family: Hercules;
     font-style: normal;
     font-weight: normal;
-    font-size: calc(15px + 1vw);
+    font-size: 20px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #421E0E;
+}
+
+/*set styles for the back icon*/
+.backlink img {
+    padding-top: 20px;
 }
 
 a {
     color: #421E0E; 
     text-decoration:none; /* remove the under line of href in nav*/
 }
-
-/* .header a:hover {
-    text-decoration: 1px solid #421E0E;
-} */
-
-/*let home menu align left*/
-.leftmenu {
-    float: left;
+a:hover {
+    text-decoration:underline;
+    color: #C78D67;
 }
-/*let cart menu align left*/
-.rightmenu {
-    float: right;
-} 
+
+#menuhome {
+    width: calc(220px + 1vw);
+    height: calc(60px + 1vw);
+    margin-top: -15px;
+    padding-left: 2.5vw;
+}
+#bonbon {
+    /* max-width: 50%; */
+    padding:  3vw 0vw 3vw 0vw;
+}
 
 #profile {
-    width: 30px;
-    height: 30px;
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vw);
 }
 
 #cart {
-    width: 30px;
-    height: 30px;
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vw);
 }
 
 #arrow {
     max-width: 100%;
+}
+
+#questionmark {
+   padding-top: 5px;
+   max-width: 50px;
 }
 /*styles for text*/
 .bigname {
@@ -94,43 +179,47 @@ a {
     color: #FFFFFF;
     font-weight: bolder;
 }
-
+/*style for home page describle text, use Hercules font*/
 .describle {
+    max-width: 50%;
+    padding-left: 35%;
+    font-family: Hercules;
     font-style: normal;
-    font-weight: normal;
-    font-size: calc(10px + 1vw);;
+    font-size: calc(24px + 0.5vw);;
     letter-spacing: -0.015em;
     color: #C78F74;
-    padding-left: 200px;
-    font-family: MyFont;
+    line-height: 59px;
+    letter-spacing: -0.015em;
 }
 
+.detail-describle {
+    font-family: Hercules;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/*stype for the key words in home page describle text*/
 .spec-text{
-    color:black;
+    color:#421E0E;
+    font-style: italic;
+}
+
+/*this style for 3 columns layout*/
+.three-column-1 {
+    float: left;
+    width: 32%;
+    padding: 1px;
+    text-align: center;
+    /* border: #421E0E solid 1px; */
 }
 
 /*for two columns sections*/
-.left-section {
-    float:left;
-    height: 30%;
-    width: 30%;
-    text-align: right;
-}
-
-.right-section {
-    float:left;
-    height: 30%;
-    width: 60%;
-}
-
 .two-column-half {
     float:left;
     width: 49%;
 }
 
-
 /*for two columns section in product page*/
-
 .left-section-20 {
     float:left;
     width: 19%;
@@ -143,38 +232,66 @@ a {
     padding: 10px;
     border-left: 1px solid #421E0E;
 }
-
+.right-no-split-line {
+    border-left: none;
+    padding-left: 3%;
+}
+.right-align-div {
+    text-align: right;
+}
+.chat-div{
+    margin-top: 100px;
+}
 .split-div {
     clear:both;
 }
-
 .empty-div {
     height: 30px;
     width: 100%;
-    /* border: 1px solid #421E0E; */
+  
 }
- 
-.three-column-1 {
-    float:left;
-    width:32%;
-    padding: 2px;
+.filter-div{
+    font-family: Hercules;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #421E0E;
+}
+.picons-div {
+    text-align: center;
+}
+.picons-div img{
+    max-width: 15%;
 }
 /* stype for the circle icon and it text*/
 .menu-icon {
     position: relative; 
-    width: 80%;
+    width: 90%;
     text-align: center;
+    padding-left: 3%;
 }
-
-.menu-icon-title {
+.menu-icon-title-div {
     position: absolute; 
-    top: 30%; 
-    left: 30%;
-    font-size: calc(15px + 0.5vw);
-    font-family: Sofia Pro Soft;
+    top: 0%; 
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    font-size: calc(20px + 1vw);
     font-weight: bolder;
     color: #421E0E;
+    text-align: center;
+    padding-top: 35%;
+    /* border: 1px solid #421E0E; */
 }
+
+.home-three-column-text {
+    font-size: calc(45px + 1vw);
+    color: #FFFFFF;
+    font-weight: bolder;
+    line-height: 74%;
+    letter-spacing: -0.02em;
+} 
 .menu-hover-display {
     position: absolute; 
     top: 0%; 
@@ -188,29 +305,74 @@ a {
     font-weight: bolder;
 }
 
-.menu-icon:hover .menu-icon-title {
+.menu-icon:hover .menu-icon-title-div {
     display: none;
 }
 .menu-icon:hover .menu-hover-display {
     display: block;
 }
 
-.home-three-column-text {
-    font-size: 2vw;
-    color: #FFFFFF;
-    font-weight: bolder;
-} 
-
 /*footer style*/
 footer{
     clear:both;
     background-color:#E0C8C6;
-    padding-left: 2%;
+    padding: 1% 4% 1% 4%;
     font-size: 25px;
 }
+footer h1 {
+    color: white;
+}
+
+footer p {
+    font-family: Hercules;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(15px + 1vw);
+    line-height: 36px;
+    letter-spacing: -0.01em;
+}
+
 .footer-small-text{
-    font-size: 16px;
+    font-size: 15px;
     line-height: 26px;
+}
+
+footer input[type=text] {
+    background: rgba(255, 255, 255, 0.17);
+    border: 1px solid #421E0E;
+    box-sizing: border-box;
+    height: 50px;
+    width: calc(30vw);
+}
+
+footer button {
+    background: #C78F74;
+    border: 1px solid #421E0E;
+    box-sizing: border-box;
+    height: 50px;
+    width: calc(100px + 6vw);
+    font-size: calc(10px + 1vw);
+    line-height: calc(10px + 1vw);
+    color: #421E0E;
+    text-align: center;
+    border-radius: 0px;
+}
+footer .left-half-div {
+    width: 60%;
+    padding-bottom: 30px;
+}
+footer .right-half-div {
+    width: 30%;
+    padding-left: 10%;
+    padding-bottom: 30px;
+}
+
+footer .right-div {
+    padding-left: 30%;
+}
+
+footer img {
+   width: 50px;
 }
 
 /*style for components*/
@@ -221,19 +383,36 @@ input[type=text]{
     height: 35px;
     width: 200px;
 }
+/**/
+input[type="checkbox"]{
+    width:20px;
+    height:20px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle; 
+    line-height: 18px;
+    position: relative;
+}
 button {
     background: #D15B5E;
-    border: 1px solid #421E0E;
-    box-sizing: border-box;
+    border: none; /*set the button with no border line*/
+    border-radius: 5px;
     height: 35px;
     width: calc(90px + 1vw);
     color: #FFFFFF;
+    font-family: sofia-pro-soft;
+    font-size: 16px;
+    margin-top: 5px;
 }
 
 select {
     box-sizing: border-box;
     height: 35px;
     width: calc(90px + 1vw);
+    margin-top: 5px;
+    font-family: Hercules;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 /*style for filter input*/
@@ -242,12 +421,41 @@ select {
     line-height: 40px;
     font-size: calc(5px + 1vw);
 }
-.rating {
+.pink-div {
     background: rgba(224, 200, 198, 0.5);
     margin: 20px;
-    padding: 2px;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: Hercules;
+}
+.pink-div button {
+    width: 90%;
+    height: 60px;
+    border-radius: 50px;
+}
+.map-right-div .pink-div {
+    max-width: 60%;
+    margin-left: 0%;
+    text-align: center;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #D15B5E;
 }
 
 .bolder-text{
     font-weight: bolder;
+}
+
+.star {
+    color: #F7CA59;
+}
+
+/*some styles for map page*/
+
+.mappage-describle{
+    font-family: Hercules;
+    font-style: normal;
+    font-size: 20px;
+    color: #C78F74;
 }

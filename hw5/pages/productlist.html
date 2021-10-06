@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="utf-8">
     <title>BONBON</title>
-    <link rel='stylesheet' href='styles/style.css'>
+    <link rel='stylesheet' href='../styles/style.css'>
     <link rel="stylesheet" href="https://use.typekit.net/uaa6rco.css">
 </head>
 
@@ -11,30 +11,39 @@
     <!-- Header -->
     <div class='container'>
         <nav class='header'>
-            <div class="leftmenu">
-                <ul class="homemenu">
-                    <li><a class='home' href='./index.html'>Home</a></li>
-                    <li><a class='pagelink' href='./'>News</a></li>
-                    <li><a class='pagelink' href='./productlist.html'>Shop</a></li>
-                    <li><a class='pagelink' href='./productdetail.html'>Map</a></li>
+            <div class="three-column-1">
+                <ul>
+                    <li><a class='pagelink' href='../pages/news.html'>news</a></li>
+                    <li><a class='pagelink' href='../pages/productlist.html'>shop</a></li>
+                    <li><a class='pagelink' href='../pages/map.html'>map</a></li>
                 </ul>
             </div>
-            <div class="rightmenu">
-                <ul class="cartmenu">
-                    <li><a class='pagelinkimg' href='#mono'><img id="profile" src="images/profile.png"
+            <div class="three-column-1">
+                <ul>
+                    <li><a href="../index.html"><img id="menuhome" src="../images/menuhome.png" alt="BONBON"></a></li>
+                </ul>
+            </div>
+            <div class="three-column-1 right-align-div">
+                <ul>
+                    <li><a class='pagelinkimg' href='#mono'><img id="profile" src="../images/profile.png"
                                 alt="my profile"></a></li>
-                    <li><a class='pagelinkimg2' href='#mono'> <img id="cart" src="images/cart.png" alt="my cart"></a>
+                    <li><a class='pagelinkimg2' href='#mono'> <img id="cart" src="../images/cart.png"
+                                alt="my cart"></a>
                     </li>
                 </ul>
             </div>
             <div class="split-div"></div>
-            <a href="./index.html">
-                <- back to Home </a>
-                    <div class="empty-div"></div>
         </nav>
+        <div class="backlink"> 
+           <img src="../images/backicon.png" alt="--">
+           <a href="../index.html">Back To Home</a> 
+           <div class="empty-div"> </div>
+           <div class="empty-div"> </div>
+        </div>
         <div class="midcontainer">
             <div class="left-section-20">
-                <h3> Filter</h3>
+                <span class="mid-head-font"> Filter</span> <br>
+                <br>
                 <button>clear</button> <br>
                 <div class="filter-div">
                     <input type="checkbox" name="filter" value="On Sale">On Sale<br>
@@ -42,30 +51,32 @@
                     <input type="checkbox" name="filter" value="Gluten-free">Gluten-free <br>
                     <input type="checkbox" name="filter" value="Fruits">Fruits <br>
                 </div>
-
+                <div class="chat-div"> 
+                    <img src="../images/chat.png" alt="chat">
+                </div>
             </div>
             <div class="right-section-80">
                 <div class="three-column-1">
                     <div class="menu-icon">
-                        <img src="./images/product1.png" width="100%" alt="">
-                        <span class="menu-icon-title">Original</span>
+                        <img src="./../images/product1.png" alt="product">
+                        <div class="menu-icon-title-div">Original</div>
                         <div class="menu-hover-display menu-hover-button"><a href="./productdetail.html"> see flavor detail</a> </div>
                     </div>
                     <div>
-                        <select id="group11" value="1">
-                            <option value="1">Box of 1</option>
+                        <select>
+                            <option>Box of 1</option>
                             <option value="2">Box of 3</option>
                             <option value="2">Box of 6</option>
                             <option value="2">Box of 12</option>
                         </select>
-                        <select id="group12" value="1">
-                            <option value="1">none</option>
+                        <select >
+                            <option>none</option>
                             <option value="2">Sugar-milk</option>
                             <option value="2">Vanilla-milk</option>
                             <option value="2">Doble-choco</option>
                         </select> <br>
-                        <select id="group13" value="1">
-                            <option value="1">quantity</option>
+                        <select>
+                            <option>quantity</option>
                             <option value="2">1</option>
                             <option value="2">2</option>
                             <option value="2">3</option>
@@ -76,25 +87,25 @@
                 </div>
                 <div class="three-column-1">
                     <div class="menu-icon">
-                        <img src="./images/product2.png" width="100%" alt="">
-                        <span class="menu-icon-title">Blackberry</span>
+                        <img src="./../images/product2.png"  alt="product">
+                        <div class="menu-icon-title-div">Blackberry</div>
                         <div class="menu-hover-display menu-hover-button"><a href="./productdetail.html"> see flavor detail</a> </div>
                     </div>
                     <div>
-                        <select id="group11" value="1">
-                            <option value="1">Box of 1</option>
+                        <select>
+                            <option>Box of 1</option>
                             <option value="2">Box of 3</option>
                             <option value="2">Box of 6</option>
                             <option value="2">Box of 12</option>
                         </select>
-                        <select id="group12" value="1">
-                            <option value="1">none</option>
+                        <select>
+                            <option>none</option>
                             <option value="2">Sugar-milk</option>
                             <option value="2">Vanilla-milk</option>
                             <option value="2">Doble-choco</option>
                         </select> <br>
-                        <select id="group13" value="1">
-                            <option value="1">quantity</option>
+                        <select>
+                            <option>quantity</option>
                             <option value="2">1</option>
                             <option value="2">2</option>
                             <option value="2">3</option>
@@ -105,25 +116,25 @@
                 </div>
                 <div class="three-column-1">
                     <div class="menu-icon">
-                        <img src="./images/product3.png" width="100%" alt="">
-                        <span class="menu-icon-title">Walnut</span>
+                        <img src="./../images/product3.png"  alt="product">
+                        <div class="menu-icon-title-div">Walnut</div>
                         <div class="menu-hover-display menu-hover-button"><a href="./productdetail.html"> see flavor detail</a> </div>
                     </div>
                     <div>
-                        <select id="group11" value="1">
-                            <option value="1">Box of 1</option>
+                        <select>
+                            <option>Box of 1</option>
                             <option value="2">Box of 3</option>
                             <option value="2">Box of 6</option>
                             <option value="2">Box of 12</option>
                         </select>
-                        <select id="group12" value="1">
-                            <option value="1">none</option>
+                        <select>
+                            <option>none</option>
                             <option value="2">Sugar-milk</option>
                             <option value="2">Vanilla-milk</option>
                             <option value="2">Doble-choco</option>
                         </select> <br>
-                        <select id="group13" value="1">
-                            <option value="1">quantity</option>
+                        <select>
+                            <option>quantity</option>
                             <option value="2">1</option>
                             <option value="2">2</option>
                             <option value="2">3</option>
@@ -133,29 +144,30 @@
                     </div>
                 </div>
                 <div class="split-div"></div>
+                <div class="empty-div"></div>
 
                 <!-- the other row of 3 columns-->
                 <div class="three-column-1">
                     <div class="menu-icon">
-                        <img src="./images/product4.png" width="100%" alt="">
-                        <span class="menu-icon-title">Original<br>(Gluten-free)</span>
+                        <img src="./../images/product4.png"  alt="product">
+                        <div class="menu-icon-title-div">Original<br>(Gluten-free)</div>
                         <div class="menu-hover-display menu-hover-button"><a href="./productdetail.html"> see flavor detail</a> </div>
                     </div>
                     <div>
-                        <select id="group11" value="1">
-                            <option value="1">Box of 1</option>
+                        <select >
+                            <option>Box of 1</option>
                             <option value="2">Box of 3</option>
                             <option value="2">Box of 6</option>
                             <option value="2">Box of 12</option>
                         </select>
-                        <select id="group12" value="1">
-                            <option value="1">none</option>
+                        <select >
+                            <option>none</option>
                             <option value="2">Sugar-milk</option>
                             <option value="2">Vanilla-milk</option>
                             <option value="2">Doble-choco</option>
                         </select> <br>
-                        <select id="group13" value="1">
-                            <option value="1">quantity</option>
+                        <select>
+                            <option>quantity</option>
                             <option value="2">1</option>
                             <option value="2">2</option>
                             <option value="2">3</option>
@@ -166,25 +178,25 @@
                 </div>
                 <div class="three-column-1">
                     <div class="menu-icon">
-                        <img src="./images/product5.png" width="100%" alt="">
-                        <span class="menu-icon-title">Pumpkin Spice</span>
+                        <img src="./../images/product5.png"  alt="product">
+                        <div class="menu-icon-title-div">Pumpkin Spice</div>
                         <div class="menu-hover-display menu-hover-button"><a href="./productdetail.html"> see flavor detail</a> </div>
                     </div>
                     <div>
-                        <select id="group11" value="1">
-                            <option value="1">Box of 1</option>
+                        <select>
+                            <option>Box of 1</option>
                             <option value="2">Box of 3</option>
                             <option value="2">Box of 6</option>
                             <option value="2">Box of 12</option>
                         </select>
-                        <select id="group12" value="1">
-                            <option value="1">none</option>
+                        <select>
+                            <option>none</option>
                             <option value="2">Sugar-milk</option>
                             <option value="2">Vanilla-milk</option>
                             <option value="2">Doble-choco</option>
                         </select> <br>
-                        <select id="group13" value="1">
-                            <option value="1">quantity</option>
+                        <select>
+                            <option>quantity</option>
                             <option value="2">1</option>
                             <option value="2">2</option>
                             <option value="2">3</option>
@@ -195,25 +207,25 @@
                 </div>
                 <div class="three-column-1">
                     <div class="menu-icon">
-                        <img src="./images/product6.png" width="100%" alt="">
-                        <span class="menu-icon-title">Caramel Pecan</span>
+                        <img src="./../images/product6.png"  alt="product">
+                        <div class="menu-icon-title-div">Caramel Pecan</div>
                         <div class="menu-hover-display menu-hover-button"><a href="./productdetail.html"> see flavor detail</a> </div>
                     </div>
                     <div>
-                        <select id="group11" value="1">
-                            <option value="1">Box of 1</option>
+                        <select>
+                            <option>Box of 1</option>
                             <option value="2">Box of 3</option>
                             <option value="2">Box of 6</option>
                             <option value="2">Box of 12</option>
                         </select>
-                        <select id="group12" value="1">
-                            <option value="1">none</option>
+                        <select>
+                            <option>none</option>
                             <option value="2">Sugar-milk</option>
                             <option value="2">Vanilla-milk</option>
                             <option value="2">Doble-choco</option>
                         </select> <br>
-                        <select id="group13" value="1">
-                            <option value="1">quantity</option>
+                        <select>
+                            <option>quantity</option>
                             <option value="2">1</option>
                             <option value="2">2</option>
                             <option value="2">3</option>
@@ -226,15 +238,28 @@
             </div>
             <div class="split-div"></div>
         </div>
+        <div class="empty-div"></div>
+        <div class="empty-div"></div>
         <footer>
             <h1>BONBON</h1>
-            <p> Want to know our latest sales and news?</p>
-            <input type="text"> <button> Subscribe</button>
+            <div class="two-column-half left-half-div">
+                <p> Want to know our latest sales and news?</p>
+                <input type="text"> <button> Subscribe</button>
+            </div>
+            <div class="two-column-half right-half-div">
+                <p> Follow us! </p>
+                <div class="right-div">
+                    <img src="../images/followicon.png" alt="followicon">
+                    <img src="../images/followicon.png" alt="followicon">
+                    <img src="../images/followicon.png" alt="followicon">
+                </div>
+            </div>
+            <div class="split-div"></div>
             <div class="footer-small-text">
-                <div class="leftmenu">
+                <div class="two-column-half">
                     © 2003-2021 BonBonBake, All rights reserved
                 </div>
-                <div class="rightmenu">
+                <div class="two-column-half right-align-div">
                     website by Jenny Shuyu Liu (shuyul1)
                 </div>
                 <div class="split-div"></div>

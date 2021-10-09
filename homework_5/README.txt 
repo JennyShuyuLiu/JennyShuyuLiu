@@ -1,0 +1,6 @@
+Important: 
+The big buttons on the home page and some other hover-related behaviors on the site are not fully functional yet. They will be fully functional in the future by using js events. For now, please use the navbar to navigate the site. Thanks!
+
+Bonus Extra work : 
+In addition to the required three pages, I also coded the 'map' page from my design in Figma. It is a two-column layout. The page aims to 
+The page tells the user the location of our store and if the user is eligible for delivery since the store only delivers to addresses within the Pittsburgh area.

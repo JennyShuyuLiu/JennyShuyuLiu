@@ -25,7 +25,7 @@
 }
 /*end of font face */
 
-/* Universal Styles */ 
+/* Universal Styles, set the font and text color, set head text style*/ 
 html {
     font-family: sofia-pro-soft;
     color: #421E0E;
@@ -47,7 +47,7 @@ h4 {
     color: #C78D67;
 }
 
-
+/*set different font style in different page and area*/
 .mid-head-font {
     font-size: 35px;
     line-height: 35px;
@@ -55,9 +55,11 @@ h4 {
     color: #421E0E;
     padding-bottom: 20px;
 }
+
 .mappage-describle li {
     font-weight: bold;
 }
+
 .map-mid-head-font {
     font-size: 35px;
     line-height: 40px;
@@ -74,13 +76,16 @@ h4 {
     color: #421E0E;
     padding-bottom: 20px;
 }
+
+/*style for horizontal line*/
 hr {
     border:none;
     border-top-width:1px;
     border-top-style:solid;
     color: #c78d67;
 }
-/*set all img's width*/
+
+/*set all img's width， do not exceed the parent element*/
 img {
     max-width: 100%;
 }
@@ -96,14 +101,15 @@ img {
     background-image:  url("../images/hometop.png");
     text-align:center;
 }
-
+/*for nav header, set background and border radius*/
 .header {
     left: 0px;
     top: -1px;
     background: #E0C8C6;
     border-radius:  0px 0px 40px 40px;
 }
-/*style for nav list */
+
+/*style for nav list, set inline-block to display in a row*/
 .header li {
     display: inline-block; 
     padding-right: 2vw;
@@ -131,14 +137,17 @@ img {
     padding-top: 20px;
 }
 
+/* set link style, when hover at a link, show the underline*/
 a {
     color: #421E0E; 
     text-decoration:none; /* remove the under line of href in nav*/
 }
+
 a:hover {
     text-decoration:underline;
     color: #C78D67;
 }
+/*end of link style*/
 
 #menuhome {
     width: calc(220px + 1vw);
@@ -146,6 +155,8 @@ a:hover {
     margin-top: -15px;
     padding-left: 2.5vw;
 }
+
+/*set size for some images*/
 #bonbon {
     /* max-width: 50%; */
     padding:  3vw 0vw 3vw 0vw;
@@ -168,8 +179,10 @@ a:hover {
 #questionmark {
    padding-top: 5px;
    max-width: 50px;
+   vertical-align:top;
 }
-/*styles for text*/
+
+/*styles for some text*/
 .bigname {
     font-style: normal;
     font-weight: normal;
@@ -179,6 +192,7 @@ a:hover {
     color: #FFFFFF;
     font-weight: bolder;
 }
+
 /*style for home page describle text, use Hercules font*/
 .describle {
     max-width: 50%;
@@ -191,7 +205,7 @@ a:hover {
     line-height: 59px;
     letter-spacing: -0.015em;
 }
-
+/*style for other page describle text, use Hercules font*/
 .detail-describle {
     font-family: Hercules;
     font-style: normal;
@@ -219,7 +233,7 @@ a:hover {
     width: 49%;
 }
 
-/*for two columns section in product page*/
+/*for two columns section in product page, left is 20% width and right is abour 80%*/
 .left-section-20 {
     float:left;
     width: 19%;
@@ -232,15 +246,20 @@ a:hover {
     padding: 10px;
     border-left: 1px solid #421E0E;
 }
+
+/*some right section do not need a left border (e.g. in product detail page and map page)*/
 .right-no-split-line {
     border-left: none;
     padding-left: 3%;
 }
+
 .right-align-div {
     text-align: right;
 }
+
 .chat-div{
-    margin-top: 100px;
+    position:absolute;
+    top: 80%;
 }
 .split-div {
     clear:both;
@@ -250,6 +269,8 @@ a:hover {
     width: 100%;
   
 }
+
+/*style for the div in product list page, the left filter section*/
 .filter-div{
     font-family: Hercules;
     font-style: normal;
@@ -258,19 +279,23 @@ a:hover {
     line-height: 24px;
     color: #421E0E;
 }
+
+/*style of the small icons in product detail page of a product*/
 .picons-div {
     text-align: center;
 }
 .picons-div img{
     max-width: 15%;
 }
-/* stype for the circle icon and it text*/
+
+/* stype for the circle menu icon and it text*/
 .menu-icon {
     position: relative; 
     width: 90%;
     text-align: center;
     padding-left: 3%;
 }
+/*set the title to be center at the circle*/
 .menu-icon-title-div {
     position: absolute; 
     top: 0%; 
@@ -285,6 +310,7 @@ a:hover {
     /* border: 1px solid #421E0E; */
 }
 
+/*home page title is larger and color is white*/
 .home-three-column-text {
     font-size: calc(45px + 1vw);
     color: #FFFFFF;
@@ -292,27 +318,49 @@ a:hover {
     line-height: 74%;
     letter-spacing: -0.02em;
 } 
+
+/*styles for the hover dislay div*/
 .menu-hover-display {
     position: absolute; 
     top: 0%; 
     left: 0%;
     display: none;
 }
-.menu-hover-button {
-    top: 40%; 
-    left: 20%;
-    background-color: #f04c36;
-    font-weight: bolder;
+.menu-icon-hover-content{
+    position: absolute; 
+    top: 0%; 
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 3%;
 }
-
-.menu-icon:hover .menu-icon-title-div {
+.menu-icon-hover-content p {
+    max-width: 80%;
+    padding-left: 10%;
+}
+/*when hover on menu-icon area, the hiden div will be disapear and menu-hover-display will apear*/
+.menu-icon:hover .menu-hover-hiden{
     display: none;
 }
 .menu-icon:hover .menu-hover-display {
     display: block;
 }
+.menu-hover-display button {
+    width: 50%;
+    height: 60px;
+    border-radius: 50px;
+    font-size: larger;
+    font-weight: bold;
+}
+.menu-hover-display a {
+    color: white;
+}
+.menu-hover-display h3 {
+    font-size: 30px;
+}
 
-/*footer style*/
+/*footer style, the button input is different from the global button and input*/
 footer{
     clear:both;
     background-color:#E0C8C6;
@@ -340,9 +388,9 @@ footer p {
 footer input[type=text] {
     background: rgba(255, 255, 255, 0.17);
     border: 1px solid #421E0E;
-    box-sizing: border-box;
     height: 50px;
     width: calc(30vw);
+    vertical-align: middle;
 }
 
 footer button {
@@ -352,15 +400,17 @@ footer button {
     height: 50px;
     width: calc(100px + 6vw);
     font-size: calc(10px + 1vw);
-    line-height: calc(10px + 1vw);
     color: #421E0E;
     text-align: center;
     border-radius: 0px;
+    vertical-align: middle;
 }
+
 footer .left-half-div {
     width: 60%;
     padding-bottom: 30px;
 }
+
 footer .right-half-div {
     width: 30%;
     padding-left: 10%;
@@ -374,6 +424,7 @@ footer .right-div {
 footer img {
    width: 50px;
 }
+/*---end of footer style----*/
 
 /*style for components*/
 input[type=text]{
@@ -383,7 +434,7 @@ input[type=text]{
     height: 35px;
     width: 200px;
 }
-/**/
+/*check box style*/
 input[type="checkbox"]{
     width:20px;
     height:20px;
@@ -391,8 +442,8 @@ input[type="checkbox"]{
     text-align: center;
     vertical-align: middle; 
     line-height: 18px;
-    position: relative;
 }
+
 button {
     background: #D15B5E;
     border: none; /*set the button with no border line*/
@@ -402,7 +453,6 @@ button {
     color: #FFFFFF;
     font-family: sofia-pro-soft;
     font-size: 16px;
-    margin-top: 5px;
 }
 
 select {
@@ -428,11 +478,17 @@ select {
     border-radius: 20px;
     font-family: Hercules;
 }
-.pink-div button {
-    width: 90%;
+.map-right-div button {
     height: 60px;
-    border-radius: 50px;
+    width: 110px;
+    font-size: 20px;
 }
+
+.map-right-div input[type=text]{
+    width: 200px;
+    height: 60px;
+}
+
 .map-right-div .pink-div {
     max-width: 60%;
     margin-left: 0%;
@@ -443,6 +499,12 @@ select {
     color: #D15B5E;
 }
 
+.pink-div button {
+    width: 90%;
+    height: 60px;
+    border-radius: 50px;
+}
+
 .bolder-text{
     font-weight: bolder;
 }
@@ -451,8 +513,7 @@ select {
     color: #F7CA59;
 }
 
-/*some styles for map page*/
-
+/*descible text styles for map page*/
 .mappage-describle{
     font-family: Hercules;
     font-style: normal;

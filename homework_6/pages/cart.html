@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BONBON</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+    <link rel='stylesheet' href='../styles/cart.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/uaa6rco.css">
+    <!-- javascript -->
+    <script src="../js/cart.js" type="text/javascript"></script>
+</head>
+
+<body onload="load();">
+    <!-- Header -->
+    <div class='container'>
+        <nav class='header'>
+            <div class="three-column-1">
+                <ul>
+                    <li><a class='pagelink' href='../pages/news.html'>news</a></li>
+                    <li><a class='pagelink' href='../pages/productlist.html'>shop</a></li>
+                    <li><a class='pagelink' href='../pages/map.html'>map</a></li>
+                </ul>
+            </div>
+            <div class="three-column-1">
+                <ul>
+                    <li><a href="../index.html"><img id="menuhome" src="../images/menuhome.png" alt="BONBON"></a></li>
+                </ul>
+            </div>
+            <div class="three-column-1 right-align-div">
+                <ul>
+                    <li><a class='pagelinkimg' href='#mono'><img id="profile" src="../images/profile.png"
+                                alt="my profile"></a></li>
+                    <li><a class='pagelinkimg2' href='./cart.html'> <img id="cart" src="../images/cart.png"
+                                alt="my cart"></a>
+                        <span class='badge' id='cartCount'> 0 </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="split-div"></div>
+        </nav>
+        <div class="backlink"> 
+            <img src="../images/backicon.png" alt="--">
+            <a href="./productlist.html">Back To Shop</a> 
+            <div class="empty-div"> </div>
+            <div class="empty-div"> </div>
+         </div>
+        <div class="midcontainer">
+            <h3> CART SUMMARY</h3>
+            <div class="cartlist cart-header">
+                <ul>
+                    <li>Item x Features 
+                        <img src="../images/questionmark.png" alt="?" title="What's the difference between&#10;'quantity and 'box of'? 
+                         'Box of' is the # of rolls that will be packed into a container,
+                        whereas 'quantity' is #  of boxes. For example, 2 boxes of 6 will give you 2×6=12 cinnamon
+                        rolls in total!  Got more questions? Don't hesitate to reach us through live chat!">
+                    </li>
+                    <li>Price</li>
+                    <li>Quantity</li>
+                    <li>Subtotal</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="cartlist cart-content">
+                <ul>
+                    <li>
+                    <img src="../images/product1.png" alt="product1"> 
+                    </li>
+                    <li>
+                        <span class="cart-mid-font">Original </span> <br>
+                        <span class="product-type"> Box of 6</span> x <span> Double-chocolate</span>
+                    </li>
+                    <li> $27.00</li>
+                    <li> 
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <button>remove</button></li>
+                    <li> $81.00</li>
+                </ul>
+                <hr>
+            </div>
+            <div class="cartlist cart-content">
+                <ul>
+                    <li>
+                    <img src="../images/product5.png" alt="product1"> 
+                    </li>
+                    <li>
+                        <span class="cart-mid-font">Pumpkin Spice </span> <br>
+                        <span class="product-type"> Box of 1</span> x <span> Double-chocolate</span>
+                    </li>
+                    <li> $4.50</li>
+                    <li>
+                        <select>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                         <button>remove</button></li>
+                    <li> $4.50</li>
+                </ul>
+                <hr>
+            </div>
+
+            <div class="total-div"> 
+                <span class="total-head-text"> Order total:</span> <br/>
+                <span class="cart-mid-font" id="total"> $85.50 </span><br/>
+                <button>process to payment </button> <br/>
+                <span> or continue to <a href="./productlist.html"> shop</a></span>
+            </div>
+            
+        </div>
+        <footer>
+            <h1>BONBON</h1>
+            <div class="two-column-half left-half-div">
+                <p> Want to know our latest sales and news?</p>
+                <input type="text"> <button> Subscribe</button>
+            </div>
+            <div class="two-column-half right-half-div">
+                <p> Follow us! </p>
+                <div class="right-div">
+                    <img src="../images/followicon.png" alt="followicon">
+                    <img src="../images/followicon.png" alt="followicon">
+                    <img src="../images/followicon.png" alt="followicon">
+                </div>
+            </div>
+            <div class="split-div"></div>
+            <div class="footer-small-text">
+                <div class="two-column-half">
+                    © 2003-2021 BonBonBake, All rights reserved
+                </div>
+                <div class="two-column-half right-align-div">
+                    website by Jenny Shuyu Liu (shuyul1)
+                </div>
+                <div class="split-div"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

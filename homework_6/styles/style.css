@@ -309,13 +309,12 @@ a:hover {
     top: 0%; 
     left: 0%;
     width: 100%;
-    height: 100%;
+    height: 50%;
     font-size: calc(20px + 1vw);
     font-weight: bolder;
     color: #421E0E;
     text-align: center;
     padding-top: 35%;
-    /* border: 1px solid #421E0E; */
 }
 
 /*home page title is larger and color is white*/

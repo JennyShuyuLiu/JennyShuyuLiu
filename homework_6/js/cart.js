@@ -55,3 +55,19 @@ function showBigImg(imgname){
     console.log(imgname);
     imgProduct.src =  "./../images/" + imgname;
 }
+
+/*This is the function to execute when the mouse hover on the question mart
+  When hover, let the other div display the detail content
+*/
+function titleMouseOver(){
+    var title = document.getElementById("float-describe");
+    title.style.display = "block";
+}
+
+/*This is the function to execute when the mouse move out the question mart
+  When hover, let the other div be hidden
+*/
+function titleMouseOut(){
+    var title = document.getElementById("float-describe");
+    title.style.display = "none";
+}

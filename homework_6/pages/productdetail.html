@@ -78,8 +78,17 @@
                         <option value="product-detail-img3.png">Vanilla-milk</option>
                         <option value="product-detail-img4.png">Doble-choco</option>
                     </select>
-                    <img id="questionmark" src="./../images/questionmark.png"  alt="?" 
-                        title="What's the difference between 'quantity and 'box of'?  'Box of' is the # of rolls that will be packed into a container, whereas 'quantity' is #  of boxes. For example, 2 boxes of 6 will give you 2×6=12 cinnamon rolls in total! Got more questions? Don't hesitate to reach us through live chat!">
+                    <div id="questionmark2" onmouseover="titleMouseOver()" onmouseout="titleMouseOut()" >
+                        <img id="questionmark" src="./../images/questionmark.png"  alt="?">
+                    </div>
+                    <div id="float-describe" class="float-div-1">
+                        <strong>What's the difference between&#10;'quantity and 'box of'? </strong> <br>
+                        'Box of' is the # of rolls that will be packed into a container,
+                        whereas 'quantity' is #  of boxes. For example, 2 boxes of 6 will give you 2×6=12 cinnamon
+                        rolls in total! <br>
+                        <strong>Got more questions? </strong><br>
+                        Don't hesitate to reach us through  <a href="#">live chat!</a>"
+                    </div>
                     <br>
                     <select id="quantity-select" >
                         <option value="1">1</option>

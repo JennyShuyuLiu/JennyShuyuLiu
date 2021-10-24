@@ -212,6 +212,14 @@ a:hover {
     font-size: 20px;
 }
 
+/*style for productlist page describle text, use Hercules font*/
+.productlist-detail-describle-describle {
+    font-family: Hercules;
+    font-style: normal;
+    font-size: 14px;
+}
+
+
 /*stype for the key words in home page describle text*/
 .spec-text{
     color:#421E0E;
@@ -347,12 +355,24 @@ a:hover {
     display: block;
 }
 .menu-hover-display button {
-    width: 50%;
+    width: 40%;
     height: 60px;
     border-radius: 50px;
-    font-size: larger;
+    font-size: 20px;
     font-weight: bold;
 }
+
+/*charge the cursor to a hand when hover on button*/
+.menu-hover-display button:hover{
+    cursor:pointer   
+}
+
+.see-detail-button{
+    width: 60% !important;;
+    height: 50px !important;;
+    font-size: 14px !important;
+}
+
 .menu-hover-display a {
     color: white;
 }
@@ -449,7 +469,7 @@ button {
     border: none; /*set the button with no border line*/
     border-radius: 5px;
     height: 35px;
-    width: calc(90px + 1vw);
+    width: calc(100px + 1vw);
     color: #FFFFFF;
     font-family: sofia-pro-soft;
     font-size: 16px;
@@ -462,6 +482,7 @@ select {
     margin-top: 5px;
     font-family: Hercules;
     font-size: 16px;
+    color:#421E0E;
     border-radius: 5px;
 }
 
@@ -532,11 +553,51 @@ select {
 }
 /* set cart count font and position*/
 #cartCount {
-    font-size: 25px;
+    font-size: 16px;
     font-family: Hercules;
     color: #fff;
-    padding: 1px 8px;
+    padding: 6px 12px;
     vertical-align: top;
     margin-left: -20px; 
     display: none;
+}
+
+/*style for the descrbe div when question mark hovered */
+.float-div-1 {
+    font-family: Hercules;
+    padding: 10px;
+    margin-top: -100px;
+    margin-left: 250px;
+    height: 120px;
+    width: 550px;
+    border-radius: 10px;
+    border: #421E0E solid 1px; 
+    position:absolute;
+    display: none;
+}
+
+.float-div-2 {
+    font-family: Hercules;
+    padding: 10px;
+    margin-top: -155px;
+    margin-left: 320px;
+    width: 450px;
+    border-radius: 10px;
+    border: #421E0E solid 1px; 
+    position:absolute;
+    display: none;
+}
+
+.float-div-2 a {
+    color: #D15B5E;
+    text-decoration: underline;
+}
+
+.float-div-1 a {
+    color: #D15B5E;
+    text-decoration: underline;
+}
+
+#questionmark2 {
+    display: inline;
 }

@@ -46,13 +46,20 @@
          </div>
         <div class="midcontainer">
             <h3> CART SUMMARY</h3>
+            <div id="float-describe" class="float-div-2">
+                 <strong>What's the difference between&#10;'quantity and 'box of'? </strong> <br>
+                    'Box of' is the # of rolls that will be packed into a container,
+                    whereas 'quantity' is #  of boxes. For example, 2 boxes of 6 will give you 2×6=12 cinnamon
+                    rolls in total! <br>
+                    <strong>Got more questions? </strong><br>
+                    Don't hesitate to reach us through  <a href="#">live chat!</a>"
+            </div>
             <div class="cartlist cart-header">
                 <ul>
                     <li>Item x Features 
-                        <img src="../images/questionmark.png" alt="?" title="What's the difference between&#10;'quantity and 'box of'? 
-                         'Box of' is the # of rolls that will be packed into a container,
-                        whereas 'quantity' is #  of boxes. For example, 2 boxes of 6 will give you 2×6=12 cinnamon
-                        rolls in total!  Got more questions? Don't hesitate to reach us through live chat!">
+                        <div id="questionmark2" onmouseover="titleMouseOver()" onmouseout="titleMouseOut()" >
+                            <img  src="../images/questionmark.png" alt="?">
+                        </div>
                     </li>
                     <li>Price</li>
                     <li>Quantity</li>
@@ -91,7 +98,7 @@
                         <span class="cart-mid-font">Pumpkin Spice </span> <br>
                         <span class="product-type"> Box of 1</span> x <span> Double-chocolate</span>
                     </li>
-                    <li> $4.50</li>
+                    <li> $4.50&nbsp; </li>
                     <li>
                         <select>
                             <option value="1" selected>1</option>
@@ -109,7 +116,7 @@
                 <span class="total-head-text"> Order total:</span> <br/>
                 <span class="cart-mid-font" id="total"> $85.50 </span><br/>
                 <button>process to payment </button> <br/>
-                <span> or continue to <a href="./productlist.html"> shop</a></span>
+                <span class="continue-shop"> or  <a href="./productlist.html">continue to shop</a></span>
             </div>
             
         </div>

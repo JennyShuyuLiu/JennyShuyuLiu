@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BONBON</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+    <link rel='stylesheet' href='../styles/cart.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/uaa6rco.css">
+    <!-- javascript -->
+    <script src="../js/cart.js" type="text/javascript"></script>
+</head>
+
+<body onload="load(); load_product();">
+    <!-- Header -->
+    <div class='container'>
+        <nav class='header'>
+            <div class="three-column-1">
+                <ul>
+                    <li><a class='pagelink' href='../pages/news.html'>news</a></li>
+                    <li><a class='pagelink' href='../pages/productlist.html'>shop</a></li>
+                    <li><a class='pagelink' href='../pages/map.html'>map</a></li>
+                </ul>
+            </div>
+            <div class="three-column-1">
+                <ul>
+                    <li><a href="../index.html"><img id="menuhome" src="../images/menuhome.png" alt="BONBON"></a></li>
+                </ul>
+            </div>
+            <div class="three-column-1 right-align-div">
+                <ul>
+                    <li><a class='pagelinkimg' href='#mono'><img id="profile" src="../images/profile.png"
+                                alt="my profile"></a></li>
+                    <li><a class='pagelinkimg2' href='./cart.html'> <img id="cart" src="../images/cart.png"
+                                alt="my cart"></a>
+                        <span class='badge' id='cartCount'> 0 </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="split-div"></div>
+        </nav>
+        <div class="backlink"> 
+            <img src="../images/backicon.png" alt="--">
+            <a href="./productlist.html">Back To Shop</a> 
+            <div class="empty-div"> </div>
+            <div class="empty-div"> </div>
+         </div>
+        <div class="midcontainer">
+            <h3> CART SUMMARY</h3>
+            <div id="float-describe" class="float-div-2">
+                 <strong>What's the difference between&#10;'quantity and 'box of'? </strong> <br>
+                    'Box of' is the # of rolls that will be packed into a container,
+                    whereas 'quantity' is #  of boxes. For example, 2 boxes of 6 will give you 2×6=12 cinnamon
+                    rolls in total! <br>
+                    <strong>Got more questions? </strong><br>
+                    Don't hesitate to reach us through  <a href="#">live chat!</a>"
+            </div>
+            <div class="cartlist cart-header">
+                <ul>
+                    <li>Item x Features 
+                        <div id="questionmark2" onmouseover="titleMouseOver()" onmouseout="titleMouseOut()" >
+                            <img  src="../images/questionmark.png" alt="?">
+                        </div>
+                    </li>
+                    <li>Price</li>
+                    <li>Quantity</li>
+                    <li>Subtotal</li>
+                </ul>
+            </div>
+            <hr>
+            <div id="cart-product-list">
+                You have choose nothing, go and select products you like!
+            </div>
+            <div class="total-div"> 
+                <span class="total-head-text"> Order total:</span> <br/>
+                <span class="cart-mid-font" > $ <span id="total">85.50 </span></span><br/>
+                <button>process to payment </button> <br/>
+                <span class="continue-shop"> or  <a href="./productlist.html">continue to shop</a></span>
+            </div>
+            
+        </div>
+        <footer>
+            <h1>BONBON</h1>
+            <div class="two-column-half left-half-div">
+                <p> Want to know our latest sales and news?</p>
+                <input type="text"> <button> Subscribe</button>
+            </div>
+            <div class="two-column-half right-half-div">
+                <p> Follow us! </p>
+                <div class="right-div">
+                    <img src="../images/followicon.png" alt="followicon">
+                    <img src="../images/followicon.png" alt="followicon">
+                    <img src="../images/followicon.png" alt="followicon">
+                </div>
+            </div>
+            <div class="split-div"></div>
+            <div class="footer-small-text">
+                <div class="two-column-half">
+                    © 2003-2021 BonBonBake, All rights reserved
+                </div>
+                <div class="two-column-half right-align-div">
+                    website by Jenny Shuyu Liu (shuyul1)
+                </div>
+                <div class="split-div"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

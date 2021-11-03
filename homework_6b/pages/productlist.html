@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BONBON</title>
+    <link rel='stylesheet' href='../styles/style.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/uaa6rco.css">
+    <!-- javascript -->
+    <script src="../js/cart.js" type="text/javascript"></script>
+</head>
+
+<body onload="load();">
+    <!-- Header -->
+    <div class='container'>
+        <nav class='header'>
+            <div class="three-column-1">
+                <ul>
+                    <li><a class='pagelink' href='../pages/news.html'>news</a></li>
+                    <li><a class='pagelink' href='../pages/productlist.html'>shop</a></li>
+                    <li><a class='pagelink' href='../pages/map.html'>map</a></li>
+                </ul>
+            </div>
+            <div class="three-column-1">
+                <ul>
+                    <li><a href="../index.html"><img id="menuhome" src="../images/menuhome.png" alt="BONBON"></a></li>
+                </ul>
+            </div>
+            <div class="three-column-1 right-align-div">
+                <ul>
+                    <li><a class='pagelinkimg' href='#mono'><img id="profile" src="../images/profile.png"
+                                alt="my profile"></a></li>
+                    <li><a class='pagelinkimg2' href='./cart.html'> <img id="cart" src="../images/cart.png"
+                                alt="my cart"></a>
+                        <span class='badge' id='cartCount'> 0 </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="split-div"></div>
+        </nav>
+        <div class="backlink"> 
+           <img src="../images/backicon.png" alt="--">
+           <a href="../index.html">Back To Home</a> 
+           <div class="empty-div"> </div>
+           <div class="empty-div"> </div>
+        </div>
+        <div class="midcontainer">
+            <div class="left-section-20">
+                <span class="mid-head-font"> Filter</span> <br>
+                <br>
+                <button>clear</button> <br>
+                <div class="filter-div">
+                    <input type="checkbox" name="filter" value="On Sale">On Sale<br>
+                    <input type="checkbox" name="filter" value="Seasonal">Seasonal <br>
+                    <input type="checkbox" name="filter" value="Gluten-free">Gluten-free <br>
+                    <input type="checkbox" name="filter" value="Fruits">Fruits <br>
+                </div>
+                <div class="chat-div"> 
+                    <img src="../images/chat.png" alt="chat">
+                </div>
+            </div>
+            <div class="right-section-80">
+                <div class="three-column-1">
+                    <div class="menu-icon">
+                        <!--menu-hover-hiden is the original display area but hidden when hover in menu-icon area-->
+                        <img src="./../images/product1.png" alt="product">
+                        <div class="menu-hover-hiden">
+                            <div class="menu-icon-title-div"> Original</div>
+                        </div>
+                        <!--mmenu-hover-display is the original none display area but display when hover in menu-icon area-->
+                        <div class="menu-hover-display">
+                            <img src="../images/backgroud-yellow2.png" alt="backgroud-yellow">
+                            <div class="menu-icon-hover-content">
+                                <h3>Original</h3>
+                                <p class="productlist-detail-describle">
+                                    Browse all 6 of our original cinnamon rolls. 
+                                </p>
+                                <button class="see-detail-button" onclick="window.location='./productdetail.html'">see flavor detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p hidden>Original</p>
+                        <select>
+                            <option value="4.5">Box of 1</option>
+                            <option value="10.5">Box of 3</option>
+                            <option value="20.5">Box of 6</option>
+                            <option value="27.0">Box of 12</option>
+                        </select>
+                        <select >
+                            <option value="product1.png">none</option>
+                            <option value="product-detail-img2.png">Sugar-milk</option>
+                            <option value="product-detail-img3.png">Vanilla-milk</option>
+                            <option value="product-detail-img4.png">Doble-choco</option>
+                        </select> <br>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button onclick="addToCart(); addRecordToCart(this.parentNode);"> add to cart </button>
+                    </div>
+                </div>
+                <div class="three-column-1">
+                    <div class="menu-icon">
+                        <!--menu-hover-hiden is the original display area but hidden when hover in menu-icon area-->
+                        <img src="./../images/product2.png"  alt="product">
+                        <div class="menu-hover-hiden">
+                            <div class="menu-icon-title-div">Blackberry</div>
+                        </div>
+                        <!--mmenu-hover-display is the original none display area but display when hover in menu-icon area-->
+                        <div class="menu-hover-display">
+                            <img src="../images/backgroud-yellow2.png" alt="backgroud-yellow">
+                            <div class="menu-icon-hover-content">
+                                <h3>Blackberry</h3>
+                                <p class="productlist-detail-describle">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                </p>
+                                <button class="see-detail-button" onclick="window.location='./productdetail.html'">see flavor detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p hidden>Blackberry</p>
+                        <select>
+                            <option value="3.5">Box of 1</option>
+                            <option value="6.5">Box of 3</option>
+                            <option value="18.2">Box of 6</option>
+                            <option value="29.0">Box of 12</option>
+                        </select>
+                        <select>
+                            <option value="product2.png">none</option>
+                            <option value="product2.png">Sugar-milk</option>
+                            <option value="product2.png">Vanilla-milk</option>
+                            <option value="product2.png">Doble-choco</option>
+                        </select> <br>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button onclick="addToCart(); addRecordToCart(this.parentNode);"> add to cart </button>
+                    </div>
+                </div>
+                <div class="three-column-1">
+                    <div class="menu-icon">
+                        <!--menu-hover-hiden is the original display area but hidden when hover in menu-icon area-->
+                        <img src="./../images/product3.png"  alt="product">
+                        <div class="menu-hover-hiden">
+                            <div class="menu-icon-title-div">Walnut</div>
+                        </div>
+                        <!--mmenu-hover-display is the original none display area but display when hover in menu-icon area-->
+                        <div class="menu-hover-display">
+                            <img src="../images/backgroud-yellow2.png" alt="backgroud-yellow">
+                            <div class="menu-icon-hover-content">
+                                <h3>Walnut</h3>
+                                <p class="productlist-detail-describle">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                </p>
+                                <button class="see-detail-button" onclick="window.location='./productdetail.html'">see flavor detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p hidden>Walnut</p>
+                        <select>
+                            <option value="5.5">Box of 1</option>
+                            <option value="8.5">Box of 3</option>
+                            <option value="10.2">Box of 6</option>
+                            <option value="23.0">Box of 12</option>
+                        </select>
+                        <select>
+                            <option value="product3.png">none</option>
+                            <option value="product3.png">Sugar-milk</option>
+                            <option value="product3.png">Vanilla-milk</option>
+                            <option value="product3.png">Doble-choco</option>
+                        </select> <br>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button onclick="addToCart(); addRecordToCart(this.parentNode);"> add to cart </button>
+                    </div>
+                </div>
+                <div class="split-div"></div>
+                <div class="empty-div"></div>
+
+                <!-- the other row of 3 columns-->
+                <div class="three-column-1">
+                    <div class="menu-icon">
+                        <!--menu-hover-hiden is the original display area but hidden when hover in menu-icon area-->
+                        <img src="./../images/product4.png"  alt="product">
+                        <div class="menu-hover-hiden">
+                            <div class="menu-icon-title-div">Original<br>(Gluten-free)</div>
+                        </div>
+                        <!--mmenu-hover-display is the original none display area but display when hover in menu-icon area-->
+                        <div class="menu-hover-display">
+                            <img src="../images/backgroud-yellow2.png" alt="backgroud-yellow">
+                            <div class="menu-icon-hover-content">
+                                <h3>Original<br>(Gluten-free)</h3>
+                                <p class="productlist-detail-describle">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                </p>
+                                <button class="see-detail-button" onclick="window.location='./productdetail.html'">see flavor detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p hidden>Orginal-Gluten-Free</p>
+                        <select>
+                            <option value="5.5">Box of 1</option>
+                            <option value="8.5">Box of 3</option>
+                            <option value="10.2">Box of 6</option>
+                            <option value="23.0">Box of 12</option>
+                        </select>
+                        <select>
+                            <option value="product4.png">none</option>
+                            <option value="product4.png">Sugar-milk</option>
+                            <option value="product4.png">Vanilla-milk</option>
+                            <option value="product4.png">Doble-choco</option>
+                        </select> <br>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button onclick="addToCart(); addRecordToCart(this.parentNode);"> add to cart </button>
+                    </div>
+                </div>
+                <div class="three-column-1">
+                    <div class="menu-icon">
+                        <!--menu-hover-hiden is the original display area but hidden when hover in menu-icon area-->
+                        <img src="./../images/product5.png"  alt="product">
+                        <div class="menu-hover-hiden">
+                            <div class="menu-icon-title-div">Pumpkin Spice</div>
+                        </div>
+                        <!--mmenu-hover-display is the original none display area but display when hover in menu-icon area-->
+                        <div class="menu-hover-display">
+                            <img src="../images/backgroud-yellow2.png" alt="backgroud-yellow">
+                            <div class="menu-icon-hover-content">
+                                <h3>Pumpkin Spice</h3>
+                                <p class="productlist-detail-describle">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                </p>
+                                <button class="see-detail-button" onclick="window.location='./productdetail.html'">see flavor detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p hidden>Pumpkin Spice</p>
+                        <select>
+                            <option value="2.5">Box of 1</option>
+                            <option value="3.5">Box of 3</option>
+                            <option value="5.2">Box of 6</option>
+                            <option value="12.0">Box of 12</option>
+                        </select>
+                        <select>
+                            <option value="product5.png">none</option>
+                            <option value="product5.png">Sugar-milk</option>
+                            <option value="product5.png">Vanilla-milk</option>
+                            <option value="product5.png">Doble-choco</option>
+                        </select> <br>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button onclick="addToCart(); addRecordToCart(this.parentNode);"> add to cart </button>
+                    </div>
+                </div>
+                <div class="three-column-1">
+                    <div class="menu-icon">
+                        <!--menu-hover-hiden is the original display area but hidden when hover in menu-icon area-->
+                        <img src="./../images/product6.png"  alt="product">
+                        <div class="menu-hover-hiden">
+                            <div class="menu-icon-title-div">Caramel Pecan</div>
+                        </div>
+                        <!--mmenu-hover-display is the original none display area but display when hover in menu-icon area-->
+                        <div class="menu-hover-display">
+                            <img src="../images/backgroud-yellow2.png" alt="backgroud-yellow">
+                            <div class="menu-icon-hover-content">
+                                <h3>Caramel Pecan</h3>
+                                <p class="productlist-detail-describle">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                </p>
+                                <button class="see-detail-button" onclick="window.location='./productdetail.html'">see flavor detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p hidden>Caramel Pecan</p>
+                        <select>
+                            <option value="4.5">Box of 1</option>
+                            <option value="5.5">Box of 3</option>
+                            <option value="8.2">Box of 6</option>
+                            <option value="12.0">Box of 12</option>
+                        </select>
+                        <select>
+                            <option value="product6.png">none</option>
+                            <option value="product6.png">Sugar-milk</option>
+                            <option value="product6.png">Vanilla-milk</option>
+                            <option value="product6.png">Doble-choco</option>
+                        </select> <br>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button onclick="addToCart(); addRecordToCart(this.parentNode);"> add to cart </button>
+                    </div>
+                </div>
+                <div class="split-div"></div>
+            </div>
+            <div class="split-div"></div>
+        </div>
+        <div class="empty-div"></div>
+        <div class="empty-div"></div>
+        <!--footer area-->
+        <footer>
+            <h1>BONBON</h1>
+            <div class="two-column-half left-half-div">
+                <p> Want to know our latest sales and news?</p>
+                <input type="text"> <button> Subscribe</button>
+            </div>
+            <div class="two-column-half right-half-div">
+                <p> Follow us! </p>
+                <div class="right-div">
+                    <img src="../images/followicon.png" alt="followicon">
+                    <img src="../images/followicon.png" alt="followicon">
+                    <img src="../images/followicon.png" alt="followicon">
+                </div>
+            </div>
+            <div class="split-div"></div>
+            <div class="footer-small-text">
+                <div class="two-column-half">
+                    © 2003-2021 BonBonBake, All rights reserved
+                </div>
+                <div class="two-column-half right-align-div">
+                    website by Jenny Shuyu Liu (shuyul1)
+                </div>
+                <div class="split-div"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

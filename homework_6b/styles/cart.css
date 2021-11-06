@@ -41,7 +41,7 @@
 .cart-content li:nth-child(3) {
     display: inline-block;
     margin-left: 150px;
-    width: 40px;
+    width: 100px;
 }
 .cart-content li:nth-child(4) {
     margin-left: 120px;

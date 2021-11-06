@@ -600,3 +600,10 @@ select {
 #questionmark2 {
     display: inline;
 }
+/*style for price off in product detail page*/
+.off {
+    font-size: 20px;
+    color: #D15B5E;
+    font-family: Hercules;
+    display: none;
+}

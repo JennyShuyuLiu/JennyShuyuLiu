@@ -75,7 +75,6 @@ function addRecordToCart(shop_div) {
         products = old_products;
     }
     localStorage.setItem("product",  JSON.stringify(products));
-    console.log(products);
 }
 
 function load_product() {
@@ -111,7 +110,7 @@ function load_product() {
         //sum the subtotal to total
         total += subtotal;
         htmlcontent +="<li>" + 
-            `<input type=\"text\" name=\"prodcut-cnt\" placeholder=${product.count} \/>` +
+            `<input type=\"text\" name=\"prodcut-cnt\" placeholder=${product.count} onchange="changeProdcutNum(this.parentNode.parentNode.parentNode, this)"\/>` +
             "<button onclick=\"deleteProductFromCart(this.parentNode.parentNode.parentNode)\">remove</button></li>" + 
             "<li> $" + subtotal.toFixed(2) + "</li>" + 
             "</ul> <hr></div>";
@@ -123,16 +122,43 @@ function load_product() {
     
 }
 
+function changeProdcutNum(pdiv, inputtext) {
+    var count_text = inputtext.value;
+    //check if count_text can be convert to a nubmer
+    var n = Number(count_text);
+    if (isNaN(n) || n < 1 || n > 9)
+    {
+        alert("please input a number from 1 to 9");
+        return
+    }   
+    //get the index of the current div in parent div,  that is also the delete product index of local storage array
+    var child = pdiv;
+    var i = 0;
+    while( (child = child.previousSibling) != null ) {
+        i++;
+    }
+    product_index = i;
+
+    var pro = localStorage.getItem("product");
+    products = JSON.parse(pro);
+    var change_product = products[product_index];
+    change_product.count = n;
+    //store back to the localStorage after change a product count
+    localStorage.setItem("product", JSON.stringify(products));
+    //re-calculate the total, subtotal of the prooduct with product_index, we can load product to the cart again
+    load_product();
+}
+
 function deleteProductFromCart(pdiv) {
     //get the index of the current div in parent div,  that is also the delete product index of local storage array
     var child = pdiv;
     var i = 0;
     while( (child = child.previousSibling) != null ) {
-        console.log(child);
         i++;
     }
-    prooduct_index = i;
-    console.log(prooduct_index);
+    product_index = i;
+    console.log(product_index);
+
 
     //re-calculate the total, sub the delete product's subtotal
     var pro = localStorage.getItem("product");
@@ -142,7 +168,7 @@ function deleteProductFromCart(pdiv) {
         return;
     }
     products = JSON.parse(pro);
-    var delete_product = products[prooduct_index];
+    var delete_product = products[product_index];
     var delete_subtotal = (Number)(delete_product["count"]) * (Number)(delete_product["price"]);
     var total_div = document.getElementById("total");
     var current_total = Number(total_div.innerHTML) - delete_subtotal;
@@ -152,7 +178,7 @@ function deleteProductFromCart(pdiv) {
     pdiv.parentNode.removeChild(pdiv);
 
     // now delete it from the localStorage;
-    products.splice(prooduct_index, 1); //delete the product from array
+    products.splice(product_index, 1); //delete the product from array
     localStorage.setItem("product", JSON.stringify(products));
     
     if (products.length == 0){
@@ -182,8 +208,20 @@ function deleteProductFromCart(pdiv) {
 /*when user select different box, the price will be changed*/
 function changePrice(){
     var selector = document.getElementById("box-select");
+    var price_off = document.getElementById("off-count");
     lastIndex = selector.selectedIndex;
     var price = selector.options[lastIndex].value;
+
+    //update the price off text
+    var off_count = ["20%", "25%", "50%"];
+    console.log(lastIndex);
+    if (lastIndex == 0) {
+        //no price off for box 1
+        price_off.parentNode.style.display = "none";
+    } else {
+        price_off.parentNode.style.display = "inline";
+        price_off.innerHTML = off_count[lastIndex - 1];
+    }
 
     //set the price text to the value
     var priceElement = document.getElementById("productPrice");

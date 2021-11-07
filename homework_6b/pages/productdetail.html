@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>BONBON</title>
     <link rel='stylesheet' href='../styles/style.css'>
+    <link rel='stylesheet' href='../styles/carousel.css'>
     <link rel="stylesheet" href="https://use.typekit.net/uaa6rco.css">
-     <!-- javascript -->
+    <!-- javascript -->
     <script src="../js/cart.js" type="text/javascript"></script>
+    <script src="../js/carousel.js" type="text/javascript"></script>
 </head>
 
-<body onload="load();">
+<body onload="load();initShowSlide(); auto_slide();">
     <!-- Header -->
     <div class='container'>
         <nav class='header'>
@@ -37,12 +40,12 @@
             </div>
             <div class="split-div"></div>
         </nav>
-        <div class="backlink"> 
+        <div class="backlink">
             <img src="../images/backicon.png" alt="--">
-            <a href="../index.html">Back To Home</a> 
+            <a href="../index.html">Back To Home</a>
             <div class="empty-div"> </div>
             <div class="empty-div"> </div>
-         </div>
+        </div>
         <div class="midcontainer">
             <div class="left-section-20">
                 <img src="./../images/product1.png" id="productImg" alt="product1">
@@ -53,23 +56,23 @@
                     <img src="../images/p4.png" alt="picon4" onclick="showBigImg('product-detail-img4.png')">
                 </div>
             </div>
-            <div class="right-section-80 right-no-split-line">
+            <div class="right-section-40 right-no-split-line">
                 <span class="large-head-font">Original</span> <br>
-                <div class="two-column-half">
-                    <p class="detail-describle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
+
+                <p class="detail-describle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+
                 <div class="split-div"></div>
                 <span class="mid-head-font">$<span id="productPrice">4.5</span>/box</span> <br> <br>
                 <span class="off"> You got <span id="off-count">20%</span> off!</span>
                 <div id="shop-div">
                     <p hidden>Original</p>
                     <select id="box-select" onchange="changePrice()">
-                        <option value="4.5" >Box of 1</option>
+                        <option value="4.5">Box of 1</option>
                         <option value="10.5">Box of 3</option>
                         <option value="20.5">Box of 6</option>
                         <option value="27.0">Box of 12</option>
@@ -80,25 +83,61 @@
                         <option value="product-detail-img3.png">Vanilla-milk</option>
                         <option value="product-detail-img4.png">Doble-choco</option>
                     </select>
-                    <div id="questionmark2" onmouseover="titleMouseOver()" onmouseout="titleMouseOut()" >
-                        <img id="questionmark" src="./../images/questionmark.png"  alt="?">
+                    <div id="questionmark2" onmouseover="titleMouseOver()" onmouseout="titleMouseOut()">
+                        <img id="questionmark" src="./../images/questionmark.png" alt="?">
                     </div>
                     <div id="float-describe" class="float-div-1">
                         <strong>What's the difference between&#10;'quantity and 'box of'? </strong> <br>
                         'Box of' is the # of rolls that will be packed into a container,
-                        whereas 'quantity' is #  of boxes. For example, 2 boxes of 6 will give you 2×6=12 cinnamon
+                        whereas 'quantity' is # of boxes. For example, 2 boxes of 6 will give you 2×6=12 cinnamon
                         rolls in total! <br>
                         <strong>Got more questions? </strong><br>
-                        Don't hesitate to reach us through  <a href="#">live chat!</a>"
+                        Don't hesitate to reach us through <a href="#">live chat!</a>"
                     </div>
                     <br>
-                    <select id="quantity-select" >
+                    <select id="quantity-select">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
                     <button onclick="addToCart(); addRecordToCart(this.parentNode);"> add to cart </button>
+                </div>
+            </div>
+            <div class="right-section-40 ">
+                <h4>Simalry Products</h4>
+                <div class="carousel">
+                    <!-- pictures to show and slide -->
+                    <div class="productSlides">
+                        <img src="../images/scroll1.png" alt="product">
+                        <div class="caption">Blackberry</div>
+                    </div>
+
+                    <div class="productSlides">
+
+                        <img src="../images/scroll2.png" alt="product">
+                        <div class="caption">Walnut</div>
+                    </div>
+
+                    <div class="productSlides">
+                        <img src="../images/scroll3.png" alt="product">
+                        <div class=" caption">Pumpkin Spice</div>
+                    </div>
+
+                    <div class="productSlides">
+                        <img src="../images/scroll4.png" alt="product">
+                        <div class=" caption">Caramel Pecan</div>
+                    </div>
+
+                    <a class="left-slide" onclick="scrollToLeft()">&#10094;</a>
+                    <a class="right-slide" onclick="scrollToRight()">&#10095;</a>
+                    <!-- index circle of products -->
+                    <div class="dot-div">
+                        <span class="index-dot" onclick="showSlides(1)"></span>
+                        <span class="index-dot" onclick="showSlides(2)"></span>
+                        <span class="index-dot" onclick="showSlides(3)"></span>
+                        <span class="index-dot" onclick="showSlides(4)"></span>
+                    </div>
                 </div>
             </div>
             <div class="split-div"></div>
@@ -157,8 +196,10 @@
             </div>
             <div class="right-section-80 right-no-split-line">
                 <div class="two-column-half detail-describle">
-                    <p><span class="bolder-text">Per Serving:</span> 223 calories; protein 2.7g; carbohydrates 31.6g; fat 9.9g; 
-                    cholesterol 36.7mg; sodium 262.1mg.
+                    <p><span class="bolder-text">Per Serving:</span> 223 calories; protein 2.7g; carbohydrates 31.6g;
+                        fat
+                        9.9g;
+                        cholesterol 36.7mg; sodium 262.1mg.
                     </p>
                 </div>
                 <div class="two-column-half">

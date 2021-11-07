@@ -1,0 +1,79 @@
+/*This is the styles for the carousel*/
+
+/* Slideshow container */
+.carousel {
+    width:300px;
+    position: relative;
+    margin: 30px;
+  }
+  
+  .carousel img {
+      max-width: 100%;
+  }
+  /*do not show product at first*/
+  .productSlides {
+    display: none;
+  }
+
+  /*make caption on the img*/
+  .caption {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+
+/* Next & previous buttons */
+.left-slide, .right-slide {
+    cursor: pointer; /*show the hand icon when hover on the link*/
+    position: absolute;
+    top: 40%;
+    padding: 16px;
+    color:black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius:50%;
+    user-select: none;
+  }
+  
+/* show the "scroll right slide button" at right */
+.right-slide {
+  right: 0;
+  border-radius: 10%;
+}
+
+/* show the "scroll left slide button" at left*/
+.left-slide {
+  left: 0;
+  border-radius: 10%;
+}
+
+/* when hover at the left and right button, change the backgroud to back  */
+.left-slide:hover, .right-slide:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot-div{
+  /*make the div at bottom center*/
+  position: absolute;
+  bottom: 2%;
+  text-align: center;
+  width: 100%;
+}
+
+.index-dot {
+  cursor: pointer;
+  margin-left: 3px;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%; /*make it a circle*/
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.selected{
+  background-color:black;
+}
+

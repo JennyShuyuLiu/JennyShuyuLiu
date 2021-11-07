@@ -255,6 +255,14 @@ a:hover {
     border-left: 1px solid #421E0E;
 }
 
+.right-section-40 {
+    float:left;
+    width: 35%;
+    margin-left: 10px;
+    padding: 10px;
+    border-left: 1px solid #421E0E;
+}
+
 /*some right section do not need a left border (e.g. in product detail page and map page)*/
 .right-no-split-line {
     border-left: none;

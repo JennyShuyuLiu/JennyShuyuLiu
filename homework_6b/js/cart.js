@@ -86,7 +86,7 @@ function load_product() {
     var pro = localStorage.getItem("product");
     var products = null;
     if (pro == null || JSON.parse(pro).length == 0) {
-        list_div.innerHTML = "You have choose nothing, go and select products you like!";
+        list_div.innerHTML = "There is nothing in the cart yet! Go and select something you like ;D";
         total_div.innerHTML = total.toFixed(2);
         return;
     } else {
@@ -184,7 +184,7 @@ function deleteProductFromCart(pdiv) {
     if (products.length == 0){
         //if no product in cart, show the following content
         var list_div = document.getElementById("cart-product-list");
-        list_div.innerHTML = "You have choose nothing, go and select products you like!";
+        list_div.innerHTML = "There is nothing in the cart yet! Go and select something you like ;D";
     }
 
     //decrease the product number on cart icon

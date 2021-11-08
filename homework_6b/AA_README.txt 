@@ -1,12 +1,11 @@
-Bonus Extra work
+Bonus Extra work & Highlights
 
-n/a; will do in 6b
+1. Added a gallery carousel on at Product Detail page (although the styling is not quite right yet :D). Users can click the next and prev link to change the product. The carousel can also auto-advance.
 
-1. Add a carousel on at Product Detail page， use can click the next and prev link to change product, and the carousel can also auto-advance
+2. Users can not only add products to the cart but also can change the quantity of the selected products directly on the cart page. The subtotal and total amount will be recalculated accordingly when users click outside of the number entry box.
 
-2. All product in my web can be add to cart, user can select product at product list page.  including all feedback and shopping cart functionality
+3.Price calculation: The larger the 'box of' is, the more discount the users will get. The discount amount is marked when users change their 'box of' selection from the dropdown menu, therefore encouraging sale.
 
-3. User can not only add product to cart, but also can change the quantity of the selected products, the subtotal and total amount will recalculate when change the quantity.
 
 =================================================================================
 

@@ -4,7 +4,7 @@ Bonus Extra work & Highlights
 
 2. Users can not only add products to the cart but also can change the quantity of the selected products directly on the cart page. The subtotal and total amount will be recalculated accordingly when users click outside of the number entry box.
 
-3.Price calculation: The larger the 'box of' is, the more discount the users will get. The discount amount is marked when users change their 'box of' selection from the dropdown menu, therefore encouraging sale.
+3.Price calculation: The larger the 'box of' is, the more discount the users will get. The discount amount is marked when users change their 'box of' selection from the dropdown menu (note: not quantity ), therefore encouraging sale. 
 
 
 =================================================================================

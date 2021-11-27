@@ -1,0 +1,277 @@
+/*use font face to set the Hercules font, including bold and Italic style*/
+@font-face {
+    font-family: 'Hercules';
+    src:     
+    url('../fonts/Storm-Hercules.otf');
+    font-display:auto;font-style:normal;font-weight:normal;
+}
+
+@font-face {
+    font-family: 'Hercules';
+    src:url('../fonts/Storm-Hercules-Bold.otf');
+    font-display:auto;font-style:normal;font-weight:bold;
+}
+
+@font-face {
+    font-family: 'Hercules';
+    src:url('../fonts/Storm-Hercules-BoldItalic.otf');
+    font-display:auto;font-style:italic;font-weight:bold;
+}
+
+@font-face {
+    font-family: 'Hercules';
+    src: url('../fonts/Storm-Hercules-Italic.otf');
+    font-display:auto;font-style:italic;font-weight:normal;
+}
+/*end of font face */
+
+/* Universal Styles, set the font and text color, set head text style*/ 
+html {
+    font-family: sofia-pro-soft;
+    color: #421E0E;
+    font-size: 1vw;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav {
+    background-color: black;
+}
+.author-div {
+    background: #404041;
+    padding: 15% 5%;
+}
+.center-div{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.cardlist-div {
+    margin: 3% 0%;
+}
+.title-div{
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+.article-title-div{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.section {
+    padding-top: 6%;
+}
+
+.inner-div {
+    padding: 6% 3% 1% 3%;
+}
+
+.aticle-prag{
+    padding-left: 2%;
+    padding-bottom: 8%;
+    width: 80%;
+    text-align: left;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.fontname-header {
+    margin: 5% 0% 2% 0%;
+}
+.green-text {
+    font-family: Hercules;
+    color:#1A9054;
+}
+
+.mid-big-content {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: Hercules;
+    font-size: 2vw;
+    color: #404041;
+}
+
+.author-text {
+    color: white;
+    text-align: left;
+}
+
+.mid-content-text{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    color: #181818;
+}
+
+.acticle-header{
+    font-weight: 500;
+    font-size: 1.2vw;
+ }
+
+.p-header{
+    font-family: Gill Sans;
+    font-style: normal;
+    font-weight: normal;
+    color: #1A9054;
+}
+
+#font-div-2{
+    display: none;
+}
+#font-div-3{
+    display: none;
+}
+#font-div-4{
+    display: none;
+}
+
+.btn-default{
+    width: 50%;
+    display: block;
+    margin: 20px;
+    font-size: 1.5vw;
+}
+
+#font-bnt-1{
+    background: #1A9054;
+}
+img {
+    max-width: 100%;
+}
+hr{
+    border: 1px solid #404041;
+}
+/*styles for footer*/
+footer{
+    padding: 3%;
+}
+footer input{
+    width: 20vw;
+}
+
+.inner-div .btn{
+    background: #C4C4C4;
+    font-weight: bold;
+    border-radius: 0%;
+    width: calc(100px + 10vw);
+    text-align: center;
+    color: #404041;
+    margin-right: 2%;
+}
+
+footer .btn{
+    background: #404041;
+    border-radius: 0%;
+    color: white;
+    width: 10vw;
+}
+
+footer .input-group {
+    padding-bottom: 30px;
+}
+
+a {
+    color: #1A9054;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(15, 224, 15);
+}
+
+
+/*for cards page*/
+.card {
+    border-radius: 0%;
+    text-align: center;
+    padding: 3%;
+}
+
+.card-title {
+    font-family: Hercules;
+    margin-bottom: 5%;
+    font-size: calc(12px + 2vw);
+}
+.answer-card {
+    background-color: white;
+    color: #404041;
+}
+.card-body li {
+    display: inline;
+    color: #404041;
+    margin-right: 3%;
+    list-style-type:circle;
+}
+.text-light-gray {
+    color: #E5E5E5;
+}
+.text-black{
+    color: #404041;
+}
+.text-green {
+    color: #55EC9F;
+}
+.text-deepgreen {
+    color: #1A9054;
+}
+.bg-yellow {
+    background: #D6C63D;
+}
+
+.bg-green {
+    background: #1A9154;
+}
+.bg-gray {
+    background: #E5E5E5;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+/*for card flip*/
+.flip-box{
+    max-width: 100%;
+    height: 30vh;
+    position:relative;
+ }
+
+.flip-item{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    transition:all 1s ease-in-out;
+    transform-style:preserve-3d;
+    backface-visibility:hidden;
+    box-sizing:border-box;
+}
+
+.flip-item-front {
+    transform:rotateY(0deg);
+    z-index:2;
+}
+
+.flip-item-back {
+    transform:rotateY(180deg);
+    z-index:1;
+}
+
+/* .flip-box:hover .flip-item-front {
+    z-index:1;
+    transform:rotateY(180deg);
+}
+
+.flip-box:hover .flip-item-back{
+    z-index:2;
+    transform:rotateY(0deg);
+} */

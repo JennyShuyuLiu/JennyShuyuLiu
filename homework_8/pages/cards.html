@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel='stylesheet' href='../Assets/styles/style.css'>
+    <!-- <link rel='stylesheet' href='Assets/styles/timeline.css'> -->
+    <link rel="stylesheet" href="https://use.typekit.net/uaa6rco.css">
+    <!-- javascript -->
+    <!-- <script src="Assets/js/timeline.js" type="text/javascript"> </script> -->
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="../Assets/js/myscript.js" type="text/javascript"> </script>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class='container'>
+      
+        <div class="pos-f-t">
+            <nav class="navbar navbar-dark navbar-right bg-dark" >
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="../index.html">HOME</a>
+                    <a class="nav-link" href="./cards.html">FLASH CARDS</a>
+                    <a class="nav-link" href="./fonts.html">FONT LIST</a>
+                    <a class="nav-link" href="./autor.html">ABOUT THE AUTHOR</a>
+                </nav>
+            </div>
+        </div>
+        <div class="inner-div">
+            <div class="title-div">
+                <h5>flashcards</h5>
+            </div>
+            <button class="btn" id="reavel-bnt">Reveal answers</button> 
+            <button class="btn" id="reset-bnt">Reset all cards</button>
+            <div class="cardlist-div">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-yellow" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-white">T/F</h4>
+                                    <p class="card-text text-black">Leading is The horizontal distance between baselines of type.</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">T/F</h4>
+                                    <p class="card-text">False. Leading is The vertical distance between baselines of type.</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-green" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-green">Short Ans</h4>
+                                    <p class="card-text text-white">What does the term monospace refer to? (Hint: code!).</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Short Ans</h4>
+                                    <p class="card-text">Each character is the same horizontal width.</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <!--second row-->
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-gray" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-black">Which one?</h4>
+                                    <p class="card-text text-deepgreen">What is the space between letters?</p>
+                                    <ul>
+                                        <li>A. Kerning</li>
+                                        <li>B. Leading</li> <br>
+                                        <li>C. Tracking</li>
+                                        <li>D. Spacing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Which one?</h4>
+                                    <p class="card-text">A. Kerning!</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-yellow" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-white">T/F</h4>
+                                    <p class="card-text text-black">Typeface = Font ?</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">T/F</h4>
+                                    <p class="card-text">Nooo. False. Typeface (or type family) is the name of a specific collection of related fonts.</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <!--third row-->
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-green" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-green">Short Ans</h4>
+                                    <p class="card-text text-white">What does the term x-height refer to?</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Short Ans</h4>
+                                    <p class="card-text">The height of a lowercase character, usually the x, from the baseline to the top of character.</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-gray" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-black">Which one?</h4>
+                                    <p class="card-text text-deepgreen"> ____ typeface is good for headings.</p>
+                                    <ul>
+                                        <li>A. Capation</li>
+                                        <li>B. Display</li> <br>
+                                        <li>C. Script</li>
+                                        <li>D. Head</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Which one?</h4>
+                                    <p class="card-text">B. Display!</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <!--fourth row-->
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-dark" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-green">Bonus Q</h4>
+                                    <p class="card-text text-light-gray">Very small text (5 points or less) needs what to make it most legible?</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Bonus Q</h4>
+                                    <p class="card-text">Additional overall letterspacing.</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-dark" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-green">Bonus Q</h4>
+                                    <p class="card-text text-light-gray"> Do you have a favorite font?</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Bonus Q</h4>
+                                    <p class="card-text">No matter if you have one in mind or not, head to the Font List and see a list of the author’s favorite fonts</p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <footer>
+            <div>
+                <p>Subscribe to news letter</p>
+                <div class="input-group">
+                    <input type="text">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn">subsribe</button>
+                    </div>
+                </div>
+                <div >
+                    <p>
+                        Sources used on the site see <a href="">here</a><br>
+                        collected and curated by Jenny Liu, Fall2021 - Programmable<br>
+                        Usable Interface @ CMU.
+                    <p>
+                </div>
+               
+            </div>
+        </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

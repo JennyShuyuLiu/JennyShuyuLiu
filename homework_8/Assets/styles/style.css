@@ -1,44 +1,91 @@
 /*use font face to set the Hercules font, including bold and Italic style*/
 @font-face {
-    font-family: 'Hercules';
+    font-family: 'DomaineDisplay';
     src:     
-    url('../fonts/Storm-Hercules.otf');
+    url('../fonts/DomaineDisplay-Regular.otf');
     font-display:auto;font-style:normal;font-weight:normal;
 }
 
 @font-face {
-    font-family: 'Hercules';
-    src:url('../fonts/Storm-Hercules-Bold.otf');
+    font-family: 'DomaineDisplay';
+    src:url('../fonts/DomaineDisplay-Bold.otf');
     font-display:auto;font-style:normal;font-weight:bold;
 }
 
 @font-face {
-    font-family: 'Hercules';
-    src:url('../fonts/Storm-Hercules-BoldItalic.otf');
-    font-display:auto;font-style:italic;font-weight:bold;
+    font-family: 'EBGaramond';
+    src:url('../fonts/EBGaramond08-Regular.ttf');
+    font-display:auto;font-style:normal;font-weight:normal;
 }
 
 @font-face {
-    font-family: 'Hercules';
-    src: url('../fonts/Storm-Hercules-Italic.otf');
-    font-display:auto;font-style:italic;font-weight:normal;
+    font-family: 'GillSans';
+    src: url('../fonts/GillSans.ttc');
+    font-display:auto;font-style:normal;font-weight:normal;
 }
 /*end of font face */
 
+/*==============Global style set===================*/
 /* Universal Styles, set the font and text color, set head text style*/ 
-html {
-    font-family: sofia-pro-soft;
-    color: #421E0E;
-    font-size: 1vw;
+html,body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+}
+body {
+    padding-top: 4%;
+}
+/*==============Nav style==================*/
+/*styles for nav*/
+
+.home-title-div {
+    width: 100%;
+    background: #404041;
+    margin-top: -20px;
+    padding: 80px;
 }
 
-.nav-link {
+.navbar {
+    background: #404041;
+    margin: 0;
+}
+
+.navbar-brand{
+    font-family: 'DomaineDisplay';
+    font-size: calc(1.4em + 1vw);
+    color: #E5E5E5;
+    text-decoration: none;
+}
+
+.navbar-nav{
     color: white;
 }
 
-.nav {
-    background-color: black;
+.navbar-nav a {
+    text-decoration: none;
 }
+
+.nav-link:hover{
+    transition:all 0.5s ease-in-out;
+    transform:scale(1.2);
+}
+
+.title1:hover{
+    transition:all 0.5s ease-in-out;
+    transform:scale(1.2);
+}
+
+/*==============DIV style==================*/
+/*styles for some divs*/
+.container {
+    max-width: 80%;
+}
+
+.mid-container{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
 .author-div {
     background: #404041;
     padding: 15% 5%;
@@ -53,17 +100,19 @@ html {
 .cardlist-div {
     margin: 3% 0%;
 }
+
 .title-div{
     padding-top: 1%;
     padding-bottom: 2%;
 }
+
 .article-title-div{
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
 .section {
-    padding-top: 6%;
+    padding-top: 3%;
 }
 
 .inner-div {
@@ -77,26 +126,42 @@ html {
     text-align: left;
 }
 
+#citation-div {
+    margin: 4% 0%;
+}
+
+/*============Text style====================*/
+/*styles for text*/
 h5 {
     text-transform: uppercase;
-    font-style: normal;
-    font-weight: normal;
+    font-family:'Gill Sans', 'Gill Sans MT';
 }
 
 .fontname-header {
     margin: 5% 0% 2% 0%;
 }
+
 .green-text {
-    font-family: Hercules;
-    color:#1A9054;
+    color:#177D48;
 }
 
-.mid-big-content {
+.mid-content-text{
+    font-style: normal;
+    font-weight: normal;
+    color: #181818;
+}
+
+.home-title-text {
+    font-family: 'DomaineDisplay';
+    font-size: 3em;
     text-align: center;
+    color: white;
+}
+.big-title {
+    font-family: 'DomaineDisplay';
     padding-left: 10%;
     padding-right: 10%;
-    font-family: Hercules;
-    font-size: 2vw;
+    font-size: calc(1.5em + 1vw);
     color: #404041;
 }
 
@@ -105,25 +170,28 @@ h5 {
     text-align: left;
 }
 
-.mid-content-text{
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: normal;
-    color: #181818;
+.content-text {
+    font-size: calc(1em + 0.2vw);
+    font-family: Garamond, serif;
 }
 
-.acticle-header{
-    font-weight: 500;
-    font-size: 1.2vw;
+.p-header1{
+    padding-top: 2%;
+    font-size: calc(1.4em + 0.3vw);
+    font-weight: 800;
+    font-family: 'Gill Sans';
  }
 
 .p-header{
-    font-family: Gill Sans;
-    font-style: normal;
-    font-weight: normal;
-    color: #1A9054;
+    padding-top: 1%;
+    font-size: calc(1.2em + 0.5vw);
+    font-weight: 400;
+    font-family: 'Gill Sans';
+    color: #177D48;
 }
 
+/*=============Interactive font div Style===================*/
+/*set the other font divs to not display*/
 #font-div-2{
     display: none;
 }
@@ -134,53 +202,34 @@ h5 {
     display: none;
 }
 
+#font-bnt-1{
+    background: #177D48;
+}
+
+/*=============Some component and label style ===================*/
+/*set component style*/
 .btn-default{
-    width: 50%;
+    width: calc(8em + 2vw);
     display: block;
     margin: 20px;
-    font-size: 1.5vw;
+    font-size: calc(0.5em + 2vw);
 }
-
-#font-bnt-1{
-    background: #1A9054;
-}
-img {
-    max-width: 100%;
-}
-hr{
-    border: 1px solid #404041;
-}
-/*styles for footer*/
-footer{
-    padding: 3%;
-}
-footer input{
-    width: 20vw;
-}
-
 .inner-div .btn{
     background: #C4C4C4;
     font-weight: bold;
+    font-family: 'Gill Sans';
     border-radius: 0%;
     width: calc(100px + 10vw);
     text-align: center;
     color: #404041;
-    margin-right: 2%;
+    margin: 2% 1%;
 }
-
-footer .btn{
-    background: #404041;
-    border-radius: 0%;
-    color: white;
-    width: 10vw;
-}
-
-footer .input-group {
-    padding-bottom: 30px;
+img {
+    max-width: 100%;
 }
 
 a {
-    color: #1A9054;
+    color: #55EC9F;
     text-decoration: underline;
 }
 
@@ -188,18 +237,40 @@ a:hover {
     color: rgb(15, 224, 15);
 }
 
+/*============Footer style====================*/
+/*styles for footer*/
+footer{
+    padding: 2%;
+    font-family: Garamond, serif;
+}
+footer input{
+    width: calc(8em + 2vw);
+}
+footer .btn{
+    background: #404041;
+    border-radius: 0%;
+    color: white;
+    width: calc(8em + 2vw);
+    font-family: 'Gill Sans';
+}
 
+footer .input-group {
+    padding-bottom: 30px;
+}
+
+/*================================*/
 /*for cards page*/
 .card {
     border-radius: 0%;
     text-align: center;
     padding: 3%;
+    font-family: Garamond, serif;
 }
 
 .card-title {
-    font-family: Hercules;
+    font-family: 'DomaineDisplay';
     margin-bottom: 5%;
-    font-size: calc(12px + 2vw);
+    font-size: calc(1em + 1vw);
 }
 .answer-card {
     background-color: white;
@@ -221,27 +292,35 @@ a:hover {
     color: #55EC9F;
 }
 .text-deepgreen {
-    color: #1A9054;
+    color: #177D48;
+}
+.text-darkgrey{
+    color: #404041;
+}
+
+.bg-black {
+    background: #181818;
 }
 .bg-yellow {
     background: #D6C63D;
 }
-
 .bg-green {
     background: #1A9154;
 }
 .bg-gray {
     background: #E5E5E5;
 }
-
 .row {
     margin-bottom: 20px;
 }
+
 /*for card flip*/
 .flip-box{
+    margin: 3% 0% 5% 0%;
     max-width: 100%;
     height: 30vh;
     position:relative;
+    font-size: calc(1em + 0.3vw);
  }
 
 .flip-item{
@@ -266,12 +345,35 @@ a:hover {
     z-index:1;
 }
 
-/* .flip-box:hover .flip-item-front {
-    z-index:1;
-    transform:rotateY(180deg);
-}
 
-.flip-box:hover .flip-item-back{
-    z-index:2;
-    transform:rotateY(0deg);
-} */
+/*set font size for small screen less than 760px*/
+@media only screen and (max-width: 760px) {
+    .content-text {
+        font-size: 1.2em;
+    }
+    
+    .p-header1{
+        font-size: 1.1em;
+     }
+    
+    .p-header{
+        font-size: 1.2em;
+    }
+    .big-title {
+        font-size: 1.4em;
+    }
+
+    .center-div{
+        display: inline;
+    }
+
+    .btn-default{
+        width: 170px;
+        display: inline;
+        margin: 10px;
+        font-size: 1.1em;
+    }
+    .home-title-div {
+       display: none;
+    }
+}

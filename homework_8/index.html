@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="./Assets/img/pageicon.png" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!--bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel='stylesheet' href='Assets/styles/style.css'>
-    <!-- <link rel='stylesheet' href='Assets/styles/timeline.css'> -->
+    <link rel='stylesheet' href='Assets/styles/timeline.css'>
     <link rel="stylesheet" href="https://use.typekit.net/uaa6rco.css">
     <!-- javascript -->
     <!-- <script src="Assets/js/timeline.js" type="text/javascript"> </script> -->
@@ -15,107 +20,183 @@
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
     <script src="Assets/js/myscript.js" type="text/javascript"> </script>
-    <title>Hello, world!</title>
+    <title>Typography101</title>
 </head>
 
 <body>
-    <div class='container'>
-      
-        <div class="pos-f-t">
-            <nav class="navbar navbar-dark navbar-right bg-dark" >
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-                    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-            </nav>
-            <div class="collapse" id="navbarToggleExternalContent">
-                <nav class="nav flex-column">
-                    <a class="nav-link" href="#">HOME</a>
-                    <a class="nav-link" href="./pages/cards.html">FLASH CARDS</a>
-                    <a class="nav-link" href="./pages/fonts.html">FONT LIST</a>
-                    <a class="nav-link" href="./pages/autor.html">ABOUT THE AUTHOR</a>
-                </nav>
-            </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">T</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./Assets/img/min-menu.png" width="25" height="25" alt="menu">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./pages/cards.html">FLASH CARDS</a>
+            <a class="nav-link" href="./pages/fonts.html">FONT LIST</a>
+            <a class="nav-link" href="./pages/autor.html">ABOUT THE AUTHOR</a>
+          </div>
         </div>
+      </nav>
+      <div class="home-title-text home-title-div text-uppercase">
+        <div class="title1 animate__animated animate__bounce animate__repeat-1" data-in="swing" >Typography 101 </div>
+     </div>
+    <div class='container'>
         <div class="mid-container">
-            <h5> WHAT IS IT</h5>
-            <p class="mid-big-content">
-                <span class="green-text">Typography</span> is the <strong> art </strong> and <strong>technique</strong> of arranging letters and characters known as <span class="green-text">type.</span>
-            </p>
-            <hr>
-            <h5>A BIT OF HISTORY </h5>
-            <hr>
-            <h5>basic terminologies </h5>
-            <div class="row">
-                <div class="col-6">
-                    <span class="acticle-header">Various typefaces</span>
-                    <p class="mid-content-text">
-                        A typeface is the design of lettering that can include variations in size, weight (bold),
-                        slope (italic), width (condensed), and so on. Each of
-                        these variations of the typeface is a font.
-                    </p>
-                    <div id="font-div-1">
-                        <span class="p-header">Serif & Sans-Serif</span>
-                        <p class="mid-content-text">
-                            In typography, a serif is a small line or stroke regularly attached to the end of a larger stroke in
-                            a letter or symbol within a particular font or family of fonts. A typeface or "font family" making
-                            use of serifs is called a serif typeface, and a typeface that does not include them is sans-serif.
-                        </p>
-                        <img src="./Assets/img/serif.png" class="img-responsive" alt="a picture shows the serif font">
+            <div class="section"> 
+                <h5> WHAT IS IT</h5>
+                <p class="big-title text-center">
+                    <span class="green-text">Typography</span> is the <strong> art </strong> and <strong>technique</strong> of arranging letters and characters known as <span class="green-text">type.</span>
+                </p>
+                <hr>
+            </div>
+            <div class="section"> 
+                <h5>A BIT OF HISTORY </h5>
+                <div class="time_line_box">
+                    <div class="time_line" style="width:100%;">
+                        <div class="time_line_background" style="transform:scaleX(0.97); ">
+                            <span class="filling_line"></span>
+                            <ol class="ol">
+                                <li>
+                                    <div id="time1" class="order_item current"  style="left:0%;"></div>
+                                </li>
+                                <li>
+                                    <div id="time2" class="order_item"  style="left:30%;"></div>
+                                </li>
+                                <li>
+                                    <div id="time3" class="order_item"  style="left:45%;"></div>
+                                </li>
+                                <li>
+                                    <div id="time4" class="order_item"  style="left:55%;"></div>
+                                </li>
+                                <li>
+                                    <div id="time5" class="order_item"  style="left:95%;"></div>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
-                    <div id="font-div-2">
-                        <span class="p-header">Monospace</span>
-                        <p class="mid-content-text">
-                            A monospaced font, also called a fixed-pitch, fixed-width,
-                            or non-proportional font, is a font whose letters and characters each
-                            occupy the same amount of horizontal space.
-                            Monospaced fonts are customary on typewriters and for typesetting computer code.
-                        </p>
-                        <img src="./Assets/img/mono.png" class="img-responsive" alt="a picture shows the monospace font">
-                    </div>
-                    <div id="font-div-3">
-                        <span class="p-header">Script</span>
-                        <p class="mid-content-text">
-                            Script typefaces are based upon the varied and often fluid stroke created by handwriting.
-                            They are generally used for display or trade printing, rather than for extended body text.
-                        </p>
-                        <img src="./Assets/img/script.png" class="img-responsive" alt="a picture shows the Script font">
-                    </div>
-                    <div id="font-div-4">
-                        <span class="p-header">Display</span>
-                        <p class="mid-content-text">
-                            They are intended for use at large sizes for headings, rather than for extended passages of body text.
-                            They may take inspiration from other genres of lettering,
-                            perhaps ornamented, exotic, abstracted or drawn in the style of a different writing system.
-                        </p>
-                        <img src="./Assets/img/display.png" class="img-responsive" alt="a picture shows the Display font">
+                    <div id="time-line-content-div">
+                        <div  id="history-div-1" class="history text_item" style="left:0%;">
+                           <p class="history-head">1000B.C </p>
+                            <p class="history-text">
+                                Phoenicians created the very first alphabet and around 1000 B.C. 
+                                The same alphabet was used by the Greeks. In fact, the word Alphabet is
+                                 a combination of the first two Greek letters, Alpha and Beta.
+                            </p>
+                            <img src="./Assets/img/history1.png" alt="Image of stone carved roman and greek letters. (The letters don't hold actual meanings.)"> 
+                        </div>
+
+                        <div  id="history-div-2" class="history text_item" style="left:30%;">
+                            <p class="history-head">1440 </p>
+                             <p class="history-text">
+                                Johannes Gutenberg invented the printing press in Germany. 
+                             </p>
+                             <img src="./Assets/img/1440.png" alt="Image of woodblock print artwork of two figures operating a traditional printing press. The figure on the left is pressing letters; the figure on the right is folding pages to dry the fresh prints."> 
+                         </div>
+
+                         <div  id="history-div-3" class="history text_item" style="left:45%;">
+                            <p class="history-head">1772 </p>
+                             <p class="history-text">
+                                Englishman, William Caslon created the Caslon typeface. It was widely popular 
+                                in England and America. Caslon was the font used for the declaration of Independence. 
+                             </p>
+                             <img src="./Assets/img/1772.png" alt="Picture of glyphs from traditional serif font Caslon, showing letters A, E, and R in their Regular weight and Regular-italicized weight."> 
+                         </div>
+
+                         <div  id="history-div-4" class="history text_item" style="left:45%;">
+                            <p class="history-head">1816 </p>
+                             <p class="history-text">
+                                William Caslon’s great-grandson, William Caslon IV, is credited 
+                                with creating the first sans serif. It was an all capital typeface that he called Egyptian.
+                             </p>
+                             <img src="./Assets/img/1816.png" alt="Image of the first sans-serif font 'Egyptian.' That says: English Egyptian, by two lines (a type foundry): the first commercial printing sans serif. "> 
+                         </div>
+
+                         <div  id="history-div-5" class="history text_item" style="left:50%;">
+                            <p class="history-head">2010</p>
+                             <p class="history-text">
+                                Google launched its library of webfonts, called Google Fonts. The fonts are open source, 
+                                meaning they are free to everyone. This innovation allowed more fonts
+                                 to be Viewable on the web, making the internet a more beautiful and legible “place”.
+                             </p>
+                             <img src="./Assets/img/2010.png" alt="Picture of a screenshot of google fonts websites' desktop view. There are two rows of random open-source fonts, six in total. All can be used in users' web projects."> 
+                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="center-div">
-                        <button id="font-bnt-1" type="button" class="btn btn-default">Serif & Sans-Serif</button>
-                        <button id="font-bnt-2" type="button" class="btn btn-default">Monospace</button>
-                        <button id="font-bnt-3" type="button" class="btn btn-default">Script</button>
-                        <button id="font-bnt-4" type="button" class="btn btn-default">Display</button>
+                <hr>
+            </div>
+            <div class="section"> 
+                <h5>basic terminologies </h5>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="p-header1">Various typefaces</div>
+                        <p class="mid-content-text content-text">
+                            A typeface is the design of lettering that can include variations in size, weight (bold),
+                            slope (italic), width (condensed), and so on. Each of
+                            these variations of the typeface is a font.
+                        </p>
+                        <div id="font-div-1">
+                            <span class="p-header">Serif & Sans-Serif</span>
+                            <p class="mid-content-text content-text">
+                                In typography, a serif is a small line or stroke regularly attached to the end of a larger stroke in
+                                a letter or symbol within a particular font or family of fonts. A typeface or "font family" making
+                                use of serifs is called a serif typeface, and a typeface that does not include them is sans-serif.
+                            </p>
+                            <img src="./Assets/img/serif.png" class="img-responsive" alt="Image of type study poster done with the font-family Source Code Sans. The letters don't hold actual meanings. Letters are used as a graphical element. ">
+                        </div>
+                        <div id="font-div-2">
+                            <span class="p-header">Monospace</span>
+                            <p class="mid-content-text content-text">
+                                A monospaced font, also called a fixed-pitch, fixed-width,
+                                or non-proportional font, is a font whose letters and characters each
+                                occupy the same amount of horizontal space.
+                                Monospaced fonts are customary on typewriters and for typesetting computer code.
+                            </p>
+                            <img src="./Assets/img/mono.png" class="img-responsive" alt="a picture shows the monospace fontImage of type study poster done with the font-family Garamond. The poster says 'Garamond premier regular'. ">
+                        </div>
+                        <div id="font-div-3">
+                            <span class="p-header">Script</span>
+                            <p class="mid-content-text content-text">
+                                Script typefaces are based upon the varied and often fluid stroke created by handwriting.
+                                They are generally used for display or trade printing, rather than for extended body text.
+                            </p>
+                            <img src="./Assets/img/script.png" class="img-responsive" alt="Image of type study poster done with the font-family Sloop Script. The poster says, 'kissed me with tenderness,' 'I haven't seen your lips,' 'hidden from me.'">
+                        </div>
+                        <div id="font-div-4">
+                            <span class="p-header">Display</span>
+                            <p class="mid-content-text content-text">
+                                They are intended for use at large sizes for headings, rather than for extended passages of body text.
+                                They may take inspiration from other genres of lettering,
+                                perhaps ornamented, exotic, abstracted or drawn in the style of a different writing system.
+                            </p>
+                            <img src="./Assets/img/display.png" class="img-responsive" alt="Image of type study poster done with the font-family Hamilton Wood. The poster shows various capital 'H's, each with a different pattern, fill, texture, or color.  ">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="center-div">
+                            <button id="font-bnt-1" type="button" class="btn btn-default">Serif & Sans-Serif</button>
+                            <button id="font-bnt-2" type="button" class="btn btn-default">Monospace</button>
+                            <button id="font-bnt-3" type="button" class="btn btn-default">Script</button>
+                            <button id="font-bnt-4" type="button" class="btn btn-default">Display</button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="section">
-                <span class="acticle-header">Typography at various scales</span>
+                <div class="p-header1">Typography at various scales</div>
                 <div id="typography" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="./Assets/img/typo1.png" alt="A picture shows when looking at characters">
+                        <img class="d-block w-100" src="./Assets/img/typo1.png" alt="Image explaining various typographical terminologies at glyph level. Font size, serif, bowl, asender, terminal. Stem and descender. ">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="./Assets/img/typo2.png" alt="A picture shows when looking words & lines">
+                        <img class="d-block w-100" src="./Assets/img/typo2.png" alt="Image explaining various typographical terminologies at a whole page level. Margin, Folio, Running head, Bleed, and Gutter.">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="./Assets/img/typo3.png" alt="A picture shows when looking at whole page">
+                        <img class="d-block w-100" src="./Assets/img/typo3.png" alt="Image explaining various typographical terminologies at the sentence level. Kerning, Tracking, Baseline, and Leading.">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="./Assets/img/typo4.png" alt="A picture shows Recap & cheatsheet">
+                        <img class="d-block w-100" src="./Assets/img/typo4.png" alt="The image that links to an external pdf cheat sheet of all the terminologies covered in previous images.">
                     </div>
                     </div>
                     <a class="carousel-control-prev" href="#typography" role="button" data-slide="prev">
@@ -133,7 +214,7 @@
                 <h5>last but not least...</h5>
                 <h5>some PRATICAL TIPS!</h5>
                 <div class="article-title-div">
-                    <p class="mid-big-content">
+                    <p class="big-title text-center">
                         "Look after <span class="green-text">goodness</span> and <span class="green-text">truth</span>, <strong>beauty</strong> will look after herself."
                     </p>
                     <p class="text-center">—— Eric Gill, <i>An Essay on Typography</i></p>
@@ -141,19 +222,19 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <span class="p-header">1.Start with only one font.</span>
-                        <p class="mid-content-text aticle-prag">
+                        <p class="mid-content-text content-text aticle-prag">
                             Using two different fonts successfully in a layout is hard. It requires an in-depth understanding 
                             of the essence in type or an enormous portion of luck.
                              In general, a good rule of thumb is, to avoid two
                               typefaces that look similar to each other and have the same classification.
                         </p>
                         <span class="p-header">2.Get used to ~5 fonts and stick to them.</span>
-                        <p class="mid-content-text aticle-prag">
+                        <p class="mid-content-text content-text aticle-prag">
                             If you are always in the veld, chasing your next .tff download, 
                             you potentially forget about the important things in life: creating stuff. 
                         </p>
                         <span class="p-header">3.Double your point size</span>
-                        <p class="mid-content-text aticle-prag">
+                        <p class="mid-content-text content-text aticle-prag">
                             When you start with Web or Interface Design it’s often difficult to determine the font size 
                             of headlines, subheadlines, and body text. 
                             Yes, you can indeed use your gut feeling, but especially 
@@ -162,12 +243,12 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <span class="p-header">4.Contrast matters: Skip font weights</span>
-                        <p class="mid-content-text aticle-prag">
+                        <p class="mid-content-text content-text aticle-prag">
                             If you want to have a striking headline and some decent body text, try to format the headline in Bold and the body in Light or even thin of it’s
                             still readable and the font family is offering you the possibility. The reason behind that is visual contrast.
                         </p>
                         <span class="p-header">5.Mind the space in your composition</span>
-                        <p class="mid-content-text aticle-prag">
+                        <p class="mid-content-text content-text aticle-prag">
                             When in doubt, try to let your layout “breathe” a little by reducing the number of things going on at your canvas. 
                             If you stuck in your design process, 
                             duplicate the artboard and attempt to reduce a certain section of your composition by half and look at the result. 
@@ -188,7 +269,7 @@
                 </div>
                 <div >
                     <p>
-                        Sources used on the site see <a href="">here</a><br>
+                        Resources used on the site see <a href="./pages/citation.html">here.</a><br>
                         collected and curated by Jenny Liu, Fall2021 - Programmable<br>
                         Usable Interface @ CMU.
                     <p>

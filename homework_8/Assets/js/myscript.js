@@ -1,17 +1,21 @@
 $(document).ready(function(){
     console.log("hello world! with JQuery ");
+    /**
+     * This function will use to change the related div to display
+     * if click on font-bnt-1. the button will change its color 
+     * and font-div-1 will display, other font-div-2, font-div-3, font-div-4 will dispear
+     * and for other buttons clicked, it will perform similarly.
+     * @returns null
+     */
     function show_font() {
         //display the content of this font
         var id=$(this).attr("id");
         index = id.substring(9);
-        console.log(index)
         fontDivID = "font-div-" + index;
         fontDiv =  $("#" + fontDivID)
-        console.log(fontDivID);
         display_attr = fontDiv.css("display");
-        console.log(display_attr);
         if (display_attr == "block") {
-            //no need to change already display this font
+            //no need to change. already display this font div
             return;
         }
         //set all to not display
@@ -102,13 +106,41 @@ $(document).ready(function(){
         }
     }
 
+    function revealHistory() {
+        //display the content of this font
+        var id=$(this).attr("id");
+        index = id.substring(4);
+        historyDivID = "history-div-" + index;
+        historyDiv =  $("#" + historyDivID);
+        display_attr = historyDiv.css("display");
+        if (display_attr == "block") {
+            //no need to change. already display this font div
+            return;
+        }
+
+        //remove the current class of other button
+         $(".order_item").removeClass("current");;
+        //set all to not display
+        $(".history").css("display", "none");
+
+        //set this select time history to display
+        $(this).addClass("current");;
+        historyDiv.css("display", "block");
+    }
+
+    /*bing the 4 buttons on home page to show_font function*/
     $("#font-bnt-1").click(show_font);
     $("#font-bnt-2").click(show_font);
     $("#font-bnt-3").click(show_font);
     $("#font-bnt-4").click(show_font);
 
+    /*bind reset all and reveal all button to related function*/
     $("#reset-bnt").click(resetCard);
     $("#reavel-bnt").click(revealCard);
 
+    /*bind each flip box div to flipCard funtion*/
     $(".flip-box").click(flipCard);
+
+    /*history time button*/
+    $(".order_item").click(revealHistory);
 });

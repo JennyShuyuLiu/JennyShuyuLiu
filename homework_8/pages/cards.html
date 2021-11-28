@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../Assets/img/pageicon.png" type="image/x-icon">
     <!--bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel='stylesheet' href='../Assets/styles/style.css'>
@@ -15,29 +16,25 @@
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
     <script src="../Assets/js/myscript.js" type="text/javascript"> </script>
-    <title>Hello, world!</title>
+    <title>Typography101</title>
 </head>
 
 <body>
-    <div class='container'>
-      
-        <div class="pos-f-t">
-            <nav class="navbar navbar-dark navbar-right bg-dark" >
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-                    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-            </nav>
-            <div class="collapse" id="navbarToggleExternalContent">
-                <nav class="nav flex-column">
-                    <a class="nav-link" href="../index.html">HOME</a>
-                    <a class="nav-link" href="./cards.html">FLASH CARDS</a>
-                    <a class="nav-link" href="./fonts.html">FONT LIST</a>
-                    <a class="nav-link" href="./autor.html">ABOUT THE AUTHOR</a>
-                </nav>
-            </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">T</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../Assets/img/min-menu.png" width="25" height="25" alt="menu">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="../index.html">HOME</a>
+            <a class="nav-link active" href="../pages/cards.html">FLASH CARDS</a>
+            <a class="nav-link" href="../pages/fonts.html">FONT LIST</a>
+            <a class="nav-link" href="../pages/autor.html">ABOUT THE AUTHOR</a>
+          </div>
         </div>
+    </nav>
+    <div class='container'>
         <div class="inner-div">
             <div class="title-div">
                 <h5>flashcards</h5>
@@ -50,7 +47,7 @@
                         <div class="flip-box">
                             <div class="flip-item flip-item-front card text-white bg-yellow" style="max-width: 90%;">
                                 <div class="card-body">
-                                    <h4 class="card-title text-white">T/F</h4>
+                                    <h4 class="card-title text-darkgrey">T/F</h4>
                                     <p class="card-text text-black">Leading is The horizontal distance between baselines of type.</p>
                                 </div>
                             </div>
@@ -61,27 +58,7 @@
                                 </div>
                             </div>
                         </div>
-                     </div>
-                     <div class="col-12 col-md-6">
-                        <div class="flip-box">
-                            <div class="flip-item flip-item-front card text-white bg-green" style="max-width: 90%;">
-                                <div class="card-body">
-                                    <h4 class="card-title text-green">Short Ans</h4>
-                                    <p class="card-text text-white">What does the term monospace refer to? (Hint: code!).</p>
-                                </div>
-                            </div>
-                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
-                                <div class="card-body">
-                                    <h4 class="card-title">Short Ans</h4>
-                                    <p class="card-text">Each character is the same horizontal width.</p>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                </div>
-                <!--second row-->
-                <div class="row">
-                    <div class="col-12 col-md-6">
+
                         <div class="flip-box">
                             <div class="flip-item flip-item-front card text-white bg-gray" style="max-width: 90%;">
                                 <div class="card-body">
@@ -102,29 +79,9 @@
                                 </div>
                             </div>
                         </div>
-                     </div>
-                     <div class="col-12 col-md-6">
+
                         <div class="flip-box">
-                            <div class="flip-item flip-item-front card text-white bg-yellow" style="max-width: 90%;">
-                                <div class="card-body">
-                                    <h4 class="card-title text-white">T/F</h4>
-                                    <p class="card-text text-black">Typeface = Font ?</p>
-                                </div>
-                            </div>
-                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
-                                <div class="card-body">
-                                    <h4 class="card-title">T/F</h4>
-                                    <p class="card-text">Nooo. False. Typeface (or type family) is the name of a specific collection of related fonts.</p>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                </div>
-                <!--third row-->
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="flip-box">
-                            <div class="flip-item flip-item-front card text-white bg-green" style="max-width: 90%;">
+                            <div class="flip-item flip-item-front card text-white bg-black" style="max-width: 90%;">
                                 <div class="card-body">
                                     <h4 class="card-title text-green">Short Ans</h4>
                                     <p class="card-text text-white">What does the term x-height refer to?</p>
@@ -137,8 +94,54 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-dark" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-green">Bonus Q</h4>
+                                    <p class="card-text text-light-gray">Very small text (5 points or less) needs what to make it most legible?</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Bonus Q</h4>
+                                    <p class="card-text">Additional overall letterspacing.</p>
+                                </div>
+                            </div>
+                        </div>
+
                      </div>
                      <div class="col-12 col-md-6">
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-black" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-green">Short Ans</h4>
+                                    <p class="card-text text-white">What does the term monospace refer to? (Hint: code!).</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Short Ans</h4>
+                                    <p class="card-text">Each character is the same horizontal width.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-box">
+                            <div class="flip-item flip-item-front card text-white bg-yellow" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-darkgrey">T/F</h4>
+                                    <p class="card-text text-black">Typeface = Font ?</p>
+                                </div>
+                            </div>
+                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
+                                <div class="card-body">
+                                    <h4 class="card-title">T/F</h4>
+                                    <p class="card-text">Nooo. False. Typeface (or type family) is the name of a specific collection of related fonts.</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="flip-box">
                             <div class="flip-item flip-item-front card text-white bg-gray" style="max-width: 90%;">
                                 <div class="card-body">
@@ -159,27 +162,7 @@
                                 </div>
                             </div>
                         </div>
-                     </div>
-                </div>
-                <!--fourth row-->
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="flip-box">
-                            <div class="flip-item flip-item-front card text-white bg-dark" style="max-width: 90%;">
-                                <div class="card-body">
-                                    <h4 class="card-title text-green">Bonus Q</h4>
-                                    <p class="card-text text-light-gray">Very small text (5 points or less) needs what to make it most legible?</p>
-                                </div>
-                            </div>
-                            <div class="flip-item flip-item-back card answer-card" style="max-width: 90%;">
-                                <div class="card-body">
-                                    <h4 class="card-title">Bonus Q</h4>
-                                    <p class="card-text">Additional overall letterspacing.</p>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                     <div class="col-12 col-md-6">
+
                         <div class="flip-box">
                             <div class="flip-item flip-item-front card text-white bg-dark" style="max-width: 90%;">
                                 <div class="card-body">
@@ -194,7 +177,8 @@
                                 </div>
                             </div>
                         </div>
-                     </div>
+
+                    </div>
                 </div>
             </div>
             <hr>
@@ -210,7 +194,7 @@
                 </div>
                 <div >
                     <p>
-                        Sources used on the site see <a href="">here</a><br>
+                        Resources used on the site see <a href="../pages/citation.html">here.</a><br>
                         collected and curated by Jenny Liu, Fall2021 - Programmable<br>
                         Usable Interface @ CMU.
                     <p>

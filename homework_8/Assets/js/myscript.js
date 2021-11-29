@@ -126,6 +126,14 @@ $(document).ready(function(){
         //set this select time history to display
         $(this).addClass("current");;
         historyDiv.css("display", "block");
+        //add animater class to let the history div slide into
+        if (index == "5") {
+            historyDiv.removeClass("slide-in-right");
+            historyDiv.addClass("slide-in-right");
+        } else {
+            historyDiv.removeClass("slide-in-left");
+            historyDiv.addClass("slide-in-left");
+        }
     }
 
     /*bing the 4 buttons on home page to show_font function*/

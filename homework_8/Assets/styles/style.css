@@ -211,6 +211,7 @@ h5 {
 
 #font-bnt-1{
     background: #177D48;
+    color:  #E5E5E5;
 }
 
 /*=============Some component and label style ===================*/
@@ -306,6 +307,9 @@ footer .input-group {
 }
 .text-deepergreen {
     color: #55EC9F;
+}
+.text-darkrgreen {
+    color:#1a7044;
 }
 .text-deepgreen {
     color: #177D48;

@@ -141,6 +141,7 @@ $(document).ready(function(){
         }
     }
 
+
     /*bing the 4 buttons on home page to show_font function*/
     $("#font-bnt-1").click(show_font);
     $("#font-bnt-2").click(show_font);
@@ -156,4 +157,16 @@ $(document).ready(function(){
 
     /*history time button*/
     $(".order_item").click(revealHistory);
+
+    /*add click animatation for the title logo */
+    var animationEvent = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
+    $('.click-wobble').click(function () { 
+        $(this).removeClass('tracking-in-expand')
+        console.log( $(this).attr('class'));
+        $(this).addClass('wobble-hor-bottom');
+        $(this).one(animationEvent, function(event) {
+            //remove the animation class, so we can trigger it next click
+            $(this).removeClass('wobble-hor-bottom')
+        });
+    }); 
 });

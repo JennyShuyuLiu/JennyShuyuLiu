@@ -238,7 +238,7 @@ img {
 }
 
 a {
-    color: #55EC9F;
+    color: #177D48;
     text-decoration: underline;
 }
 
@@ -363,7 +363,15 @@ footer .input-group {
     .content-text {
         font-size: 1.2em;
     }
-    
+    body {
+        padding-top: 60px;
+    }
+
+    .describe-div {
+        width: 100%;
+        padding-bottom: 1%;
+    }
+
     .p-header1{
         font-size: 1.1em;
      }

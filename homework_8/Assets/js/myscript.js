@@ -29,7 +29,7 @@ $(document).ready(function(){
         $("#font-div-3").css("display", "none");
         $("#font-div-4").css("display", "none");
         //set this select font to display
-        $(this).css("background-color", "#1A9054");;
+        $(this).css("background-color", "#177D48");;
         fontDiv.css("display", "block");
 
     }

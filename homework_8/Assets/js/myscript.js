@@ -19,10 +19,10 @@ $(document).ready(function(){
             return;
         }
         //set all to not display
-        $("#font-bnt-1").css("background-color", "#C4C4C4");
-        $("#font-bnt-2").css("background-color", "#C4C4C4");
-        $("#font-bnt-3").css("background-color", "#C4C4C4");
-        $("#font-bnt-4").css("background-color", "#C4C4C4");
+        $("#font-bnt-1").css("background-color", "white");
+        $("#font-bnt-2").css("background-color", "white");
+        $("#font-bnt-3").css("background-color", "white");
+        $("#font-bnt-4").css("background-color", "white");
         $("#font-bnt-1").css("color", "black");
         $("#font-bnt-2").css("color", "black");
         $("#font-bnt-3").css("color", "black");
@@ -33,8 +33,8 @@ $(document).ready(function(){
         $("#font-div-3").css("display", "none");
         $("#font-div-4").css("display", "none");
         //set this select font to display
-        $(this).css("background-color", "#177D48");
-        $(this).css("color", "#E5E5E5");
+        $(this).css("background-color", "#02552a");
+        $(this).css("color", "white");
         fontDiv.css("display", "block");
 
     }

@@ -238,8 +238,12 @@ img {
 }
 
 a {
-    color: #177D48;
+    color: #55EC9F;
     text-decoration: underline;
+}
+
+footer a {
+    color: #177D48;
 }
 
 a:hover {

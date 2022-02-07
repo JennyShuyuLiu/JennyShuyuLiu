@@ -13,8 +13,9 @@
         $arr[$rowH][$counter]['s'] = "";
         $arr[$rowH][$counter]['l'] = "";
         $arr[$rowH][$counter]['width'] = 0;
+        foreach($arrS as $k1=>$rowS){
         foreach($arrL as $k2=>$rowL){
-            foreach($arrS as $k1=>$rowS){
+            
             
             
                 $arr[$rowH][$counter]['h'] = $rowH;
@@ -46,18 +47,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Color</title>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <!-- <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="./css/style.css">
     <script src="./javascript/index.js"></script>
     <style>
-        
+        .epBox:hover .epBox1{
+            display:block
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <h1>Your Color</h1>
         <a href="./information.html">
             <button class="btn btn-primary">
@@ -65,32 +68,50 @@
             </button>
         </a>
         
-    </div>
-    <div id="content" style="width:100%;overflow-x:auto">
-    <div style='width:6000px;height:900px;margin:0px;padding:0px;display:flex;align-items:center;justify-content:center;'>
+    </div> -->
+    <div id="content" style="z-index:-1;overflow-y:visible">
+    <div style='margin-top:300px;height:300px;display:flex;flex-direction:column;flex-wrap: wrap;'>
     <?php
         foreach($arr as $k=>$row){
            
             
             // echo '<div style="width:auto;height:auto;display:flex;flex-wrap:wrap;align-items:flex-end">';
-            echo '<div style="flex-wrap:wrap;max-width:400px;height:auto;display:flexmargin:0px;padding:0px">';
+            // echo '<div style="width:auto;height:300px;display:flex;height:auto;margin:0px;padding:0px;">';
             foreach($row as $kDetail=>$rowDetail){
                 $width = 55;
                 
                 if($rowDetail['counter'] == 0){
-                    echo "<div style='background:rgba(243,243,243);outline:none;border:1px solid #383333;display:inline-block;text-align:center;line-height:".$width."px;color:white;width:".$width."px;height:".$width."px;'>
-                    
+                    echo "<div class='epBox' style='position:relative;margin-bottom:-1px;margin-right:-1px;background:rgba(243,243,243);border:1px solid #383333;text-align:center;line-height:".$width."px;color:white;width:".$width."px;height:".$width."px;'>
+                    <div class='epBox1' style='display:none;z-index:99;position:absolute;left:-".(150-$width/2)."px;bottom:".$width."px;min-height:200px;min-width:300px;border-radius:10px;background:rgb(243,243,243);border:1px solid #383333;'>123</div>
                 </div>";
                 }else{
-                    $width = ($width+$width*($rowDetail['counter'] / 100))>2.5*$width?2*$width:($width+$width*($rowDetail['counter'] / 100));
-                    $height = ($width+$width*($rowDetail['counter'] / 100))>2.5*$width?2*$width:($width+$width*($rowDetail['counter'] / 100));
-                    echo "<div id='".$rowDetail['h']."-".$rowDetail['s']."-".$rowDetail['l']."' style='vertical-align:bottom;outline:none;border:1px solid #383333;display:inline-block;text-align:center;line-height:".$width."px;color:white;width:".$width."px;height:".$width."px;background:hsl(".$rowDetail['h'].",".$rowDetail['s']."%,".$rowDetail['l']."%)'>
+                    $precentage = $width;
+                    if($rowDetail['counter'] > 100){
+                        $precentage = $width*($rowDetail['counter'] / 100);
+                    }
+                    if($precentage > 1.5*$width){
+                        $width = 1.5*$width;
+                    }
+                    if($precentage > 2*$width){
+                        $width = 2*$width;
+                    }
+                    if($precentage > 2.5*$width){
+                        $width = 2.5*$width;
+                    }
+                    if($precentage > 3*$width){
+                        $width = 3*$width;
+                    }
+
+                    // $width = >(1.5*$width)?(1.5*$width):$precentage>(2*$width)?2*$width:$precentage>(2.5*$width)?2.5*$width:$precentage>(3*$width)?3*$width:$width;
                     
+                    $height = $width;
+                    echo "<div id='".$rowDetail['h']."-".$rowDetail['s']."-".$rowDetail['l']."' style='margin-bottom:-1px;margin-right:-1px;border:1px solid #383333;text-align:center;line-height:".$width."px;color:white;width:".$width."px;height:".$width."px;background:hsl(".$rowDetail['h'].",".$rowDetail['s']."%,".$rowDetail['l']."%)'>
+                    ".$rowDetail['counter']."
                 </div>";
                 }
                 
             }
-            echo '</div>';
+            // echo '</div>';
             
         }
     ?>

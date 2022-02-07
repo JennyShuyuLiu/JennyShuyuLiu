@@ -14,27 +14,25 @@
         $arr[$rowH][$counter]['l'] = "";
         $arr[$rowH][$counter]['width'] = 0;
         foreach($arrL as $k2=>$rowL){
-        foreach($arrS as $k1=>$rowS){
-            
-           
-                $arr[$rowH][$counter]['h'] = $rowH;
-                $arr[$rowH][$counter]['s'] = $rowS;
-                $arr[$rowH][$counter]['l'] = $rowL;
-                $arr[$rowH][$counter]['counter'] = 0;
-                foreach($res as $row){
-                    $s = $row['S'];
-                    $l = $row['L'];
-                    $h = $row['HP'];
-                    if($h == $rowH && $l == $rowL && $s == $rowS){
-                        $arr[$rowH][$counter]['counter'] = $arr[$rowH][$counter]['counter'] + 1;
-                    }
-                    
+            foreach($arrS as $k1=>$rowS){
+
+                    $arr[$rowH][$counter]['h'] = $rowH;
+                    $arr[$rowH][$counter]['s'] = $rowS;
+                    $arr[$rowH][$counter]['l'] = $rowL;
+                    $arr[$rowH][$counter]['counter'] = 0;
+                    foreach($res as $row){
+                        $s = $row['S'];
+                        $l = $row['L'];
+                        $h = $row['HP'];
+                        if($h == $rowH && $l == $rowL && $s == $rowS){
+                            $arr[$rowH][$counter]['counter'] = $arr[$rowH][$counter]['counter'] + 1;
+                        }
+                        
+                    } 
+                    $counter++;
                 }
                 
-                $counter++;
             }
-            
-        }
     }
 ?>
 <!DOCTYPE html>

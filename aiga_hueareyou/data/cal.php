@@ -1,24 +1,24 @@
 <?php
 
-    // 获取数据库配置
+    // ull data
     require_once "./db.php";
     
-    // 获取所有答案并降序显示
+    // etrive all answers and sort z-a
     $sql = "select * from answer where `S` IS NULL order by id asc";
     $query = mysqli_query($db,$sql);
     $res = mysqli_fetch_all($query,1);
 
-    // 获取所有问题
+    // retrive all questions
     $sql = "select * from question";
     $query1 = mysqli_query($db,$sql);
     $res1 = mysqli_fetch_all($query1,1);
 
-    // 获取h对应的值和类型
+    // retrive h values and tags
     $sql = "select * from h";
     $query2 = mysqli_query($db,$sql);
     $res2 = mysqli_fetch_all($query2,1);
 
-    // 初始化一种h值对应的大类和小类以及S、L差异值  
+    // initializing values
     $hTextArr = array();
     foreach($res2 as $k => $row2){
         $hv = $row2['h'];
@@ -34,7 +34,7 @@
     
     
     foreach($res as $row){
-    // 获取所有答案的和对应的id值
+    // retrive all answers and their id
     $id = $row['id'];
     $q1 = $row['q1'];
     $q2 = $row['q2'];
@@ -43,7 +43,7 @@
     $q5 = $row['q5'];
     $q6 = $row['q6'];
     
-    // 对答案根据符号“|”进行分割成数组
+    // split with |
     $q1Arr = array();
     if($q1 != ""){
         $q1Arr = explode("|",$q1);
@@ -70,24 +70,24 @@
         $q6Arr = explode("|",$q6);
     }
 
-    // cal S 计算S的值
+    // cal S
     $s = 95;
-    if(count($q5Arr) >= 0 && count($q5Arr) <= 3){
+    if(count($q5Arr) >= 0 && count($q5Arr) <= 2){
         $s = 95;
     }
-    if(count($q5Arr) >= 4 && count($q5Arr) <= 5){
+    if(count($q5Arr) >= 3 && count($q5Arr) <= 4){
         $s = 85;
     }
-    if(count($q5Arr) >= 6 && count($q5Arr) <= 7){
+    if(count($q5Arr) >= 5 && count($q5Arr) <= 6){
         $s = 70;
     }
-    if(count($q5Arr) >= 8 && count($q5Arr) <= 10){
+    if(count($q5Arr) >= 7 && count($q5Arr) <= 8){
         $s = 60;
     }
-    if(count($q5Arr) > 10){
+    if(count($q5Arr) > 9){
         $s = 50;
     }
-    // cal L 计算L的值
+    // cal L
     $l = 0;
     $work = 0;
     $life = 0;
@@ -106,27 +106,28 @@
         
     }
 
-    if($life == 0 && $work > 0){
+    
+    if($work > $life){
         $l = 40;
     }
-    if($work > $life){
+    if($work == $life || ($life - $work) == 1){
         $l = 45;
     }
-    if($work == $life){
+    if(($life - $work) == 2 || ($life - $work) == 3){
         $l = 60;
     }
-    if($work < $life){
+    if(($life - $work) == 4 || ($life - $work) == 5){
         $l = 70;
     }
-    if($life > 0 && $work == 0){
-        $l = 80;
+    if(($life - $work) >= 6){
+        $l = 70;
     }
     
     // exit();
     
-    // cal H 计算H值
+    // cal H 
     $h = "";
-    // 联合所哟
+    // 联合所有数组
     $totalHArr = array_merge($q2Arr,$q3Arr,$q4Arr,$q5Arr,$q6Arr);
     $countArr = array();
     $counter = array();
@@ -157,13 +158,13 @@
             }
         }
     }
-    $counter = array_count_values($counter);   // 统计数组中所有值出现的次数
+    $counter = array_count_values($counter);   // count number of occurrence
 
-    arsort($counter);                                   // 按照键值对数组进行降序排序
+    arsort($counter);                                   //sort z-a
    
     $max_number = reset($counter);  
    
-    $more_value = key($counter);           //出现次数最多的值
+    $more_value = key($counter);           //the most frequent value
     // echo $more_value."<br/>";
     if(count($countArr) != 0){
         $avg = $total / count($countArr);

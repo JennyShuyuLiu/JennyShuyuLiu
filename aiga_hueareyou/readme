@@ -1,3 +1,5 @@
 index 1  = without box sizing
-index = with sizing (FRONT PAGE)
+index 2 = box sizing + all filled 
+index = scaling
+index_scroll = scrolling
 

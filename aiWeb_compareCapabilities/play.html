@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="./css/style.css" rel="stylesheet"/>
+		<link href="./css/animate.compat.css" rel="stylesheet">
+	</head>
+	<body oncontextmenu="return false" ondragstart="return false">
+		<div id="app" class="flex-normal play-content">
+			<div class="play-left">
+				<div class="flex-normal play-header">
+					<div class="flex-normal">
+						<img v-if="isEnter" @mouseleave="mouseleave" @mouseenter="mouseenter" src="./images/Play-2.svg" class="play-logo index9" />
+						<img v-else @mouseleave="mouseleave" @mouseenter="mouseenter" src="./images/Play-1.svg" class="play-logo index9" />
+						<img v-if="isEnter" src="./images/compare_unique_AI_capabilities.svg" class="index9" />
+					</div>
+					<div class="flex-normal nav index9">
+						<div class="nav-item jump" @click="goHome">Frontpage</div>
+						<div class="nav-item">Glossary</div>
+						<div class="nav-item">About</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="play-right animated slideInRight">
+				<div v-if="list.length > 0" class="flex-column word-intro-list">
+					<div :ref="'item'+index" :style="{'max-height': '60vh','min-height': '10vh','height':'calc(100vh / '+list.length+')'}" v-for="(item,index) in list"  class="word-item animated rollIn">
+						<div class="flex-normal word-header">
+							<div class="word-name">{{item.name}}</div>
+							<img src="./images/close.svg" class="icon28" @click="handleClose(item,index)" />
+						</div>
+						<div class="word-text">SYNONYMS</div>
+						<div class="word-content">
+							{{item.Synonyms}}
+						</div>
+						<div class="word-text">DEFINITLON</div>
+						<div class="word-content">
+							{{item.Definitlon}}
+						</div>
+						<div class="word-text">EXAMPLES</div>
+						<div class="word-content">
+							<ul>
+								<li v-for="(item2) in item.Examples">{{item2}}</li>
+							</ul>
+						</div>
+						<div v-if="(index !=0) || (index != list.length - 1)" class="empty-div"></div>
+						<div @mousedown="mousedown(index,$event)"  v-if="(index !=0) || (index != list.length - 1)" class="item-border-wrap">
+							<div class="item-border"></div>
+						</div>
+					</div>
+				</div>
+				<div v-else class="play-default">Please select an AI capability...</div>
+			</div>
+			
+			<img class="index9" @click="handleAdd(item,index)" v-if="item.isShow" v-for="(item,index) in imgList" :src="item.path" :style="{left:item.left,bottom:item.bottom,transition:  item.time}" style="position: absolute;"/>
+			<div class="circle" id="circle"></div>
+		</div>
+		<script src="./js/vue.min.js"></script>
+		<script>
+			document.addEventListener('mousemove',function(e){
+				const dom = document.querySelector('#circle')
+				//148
+				dom.style.left = e.pageX  -148 + 'px'
+				dom.style.top = e.pageY -148 + 'px'
+			})
+		</script>
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					isEnter:false,
+					list:[],
+					data:[{
+						imgIndex:5,
+						name:'Estimate',
+						Synonyms:'Rate,Grade,Measure,Assess',
+						Definitlon:'lnfer a value (e.g-position,size, duration, cost, impact) related to the current situation.This is about making an inference about now.',
+						Examples:[
+							"Estimate driving time",
+							"Estimate chances thisis spam",
+							"Estimate direction sound came from"
+						]
+					},
+					{	
+						imgIndex:6,
+						name:'Forecast',
+						Synonyms:'Predict,Guess,Speculate',
+						Definitlon:'lnfer a value that will be true or some attribute or impact of a future situation that may or may not happen (e-g.. stock price, sales, weather,chance of something being true).',
+						Examples:[
+							"Forecast best time to buy stock",
+							"Forecast tomorrow's weather",
+							"Forecast max price for my house"
+						]
+					},
+					{
+						imgIndex:1,
+						name:'Compare',
+						Synonyms:'Rank,Order,Find Best,Find cheapest,Recommend',
+						Definitlon:'Compare a collection of like items based on a metric (e.g.,a set of social media ads based on the likelinood a user might click). Allows services to select, rank, or curate a collection of things.',
+						Examples:[
+							"ompare items by likelihood of purchase",
+							"Compare posts by likely engagement",
+							"Compare movies by likelihood of watching"
+						]
+					},
+					{
+						imgIndex:2,
+						name:'Detect',
+						Synonyms:'Monitor,Sense,Notice,Clascfy,Discriminate',
+						Definitlon:'Notice if a specific kind of a thing is in a data set or if it shows up in a sensor stream.',
+						Examples:[
+							"Detect human voice in audio",
+							"Detect face in image",
+							"Detect step in motion sensor stream"
+						]
+					},
+					{
+						imgIndex:4,
+						name:'ldentify',
+						Synonyms:'Recognize,Discern,Find,Classify,Perceive',
+						Definitlon:'Notice if a specific item or class of items shows up in a set of like items.',
+						Examples:[
+							"ldentify if message is spam",
+							"ldentify if Steve's face",
+							"ldentify the type of cancer"
+						]
+					},
+					{
+						imgIndex:3,
+						name:'Discover',
+						Synonyms:'Extract,Notice,Organize,Cluster, Group,Connect,Reveal',
+						Definitlon:'Analyze a dataset and notice a pattern that allows clustering of similar things or identification of outlying entitites.',
+						Examples:[
+							"Discover how people use this site",
+							"Discover unusual bank transactions",
+							"Discover person's routine"
+						]
+					},
+					{
+						imgIndex:7,
+						name:'Generate',
+						Synonyms:'Make,Compose,Construct,reate,Author',
+						Definitlon:'Generate something new (message, image,sound) based on knowledge of similar things.',
+						Examples:[
+							"Generate chat response",
+							"Generate detail in image",
+							"Generate synthetic medical records"
+						]
+					},
+					{
+						imgIndex:0,
+						name:'Act',
+						Synonyms:'Do,Execute,Play,Go,',
+						Definitlon:'Execute a strategy to achieve a specific goal and continue to update the strategy based on advance towards the goal.',
+						Examples:[
+							"Act: Park the car",
+							"Act:Play poker",
+							"Act: Fly drone to location"
+						]
+					}],
+					imgList:[{
+						name:'Act',
+						left:'35vw',
+						bottom:'110vh',
+						time:'all 3s',
+						path:'./images/Act.svg',
+						isShow:true,
+						lastBottom:'10vh',
+						dataIndex:7
+					},{
+						name:'Compare',
+						left:'3vw',
+						bottom:'110vh',
+						time:'all 3.5s',
+						path:'./images/Compare.svg',
+						isShow:true,
+						lastBottom:'10vh',
+						dataIndex:2
+					},{
+						name:'Detect',
+						left:'12vw',
+						bottom:'110vh',
+						time:'all 4s',
+						path:'./images/Detect.svg',
+						isShow:true,
+						lastBottom:'25vh',
+						dataIndex:3
+					},{
+						name:'Discover',
+						left:'35vw',
+						bottom:'110vh',
+						time:'all 6s',
+						path:'./images/Discover.svg',
+						isShow:true,
+						lastBottom:'28vh',
+						dataIndex:5
+					},{
+						name:'Identify',
+						left:'52vw',
+						bottom:'110vh',
+						time:'all 5s',
+						path:'./images/Identify.svg',
+						isShow:true,
+						lastBottom:'15vh',
+						dataIndex:4
+					},{
+						name:'Estimate',
+						left:'15vw',
+						bottom:'110vh',
+						time:'all 3s',
+						path:'./images/Estimate.svg',
+						isShow:true,
+						lastBottom:'10vh',
+						dataIndex:0
+					},{
+						name:'Forecast',
+						left:'25vw',
+						bottom:'110vh',
+						time:'all 4s',
+						path:'./images/Forecast.svg',
+						isShow:true,
+						lastBottom:'18vh',
+						dataIndex:1
+					},{
+						name:'Generate',
+						left:'43vw',
+						bottom:'110vh',
+						time:'all 4s',
+						path:'./images/Generate.svg',
+						isShow:true,
+						lastBottom:'10vh',
+						dataIndex:6
+					}]
+					
+				},
+				created() {
+					setTimeout( () => {
+						this.imgList.map((item) => {
+							item.bottom = item.lastBottom
+							return item;
+						})
+					},1000)
+				},
+				methods: {
+					mouseenter(){
+						this.isEnter = true;
+					},
+					mouseleave(){
+						this.isEnter = false
+					},
+					mousedown(index,e){
+						const that = this
+						const item = 'item' + index
+						
+						const odiv = e.target; //获取目标元素
+						const startY = e.clientY 
+						console.log(e)
+						//阻止默认事件的方法,如果不阻止默认事件onmouseup会无法触发
+						e.preventDefault();
+						//算出鼠标相对元素的位置
+						document.onmousemove = (e) => {
+							let top = e.clientY - startY;
+							if (top > 0) {
+								that.$refs[item][0].style.height = that.$refs[item][0].offsetHeight + (top/10) + 'px'
+							} else {
+								that.$refs[item][0].style.height = that.$refs[item][0].offsetHeight - (Math.abs(top)/10) + 'px'
+							}
+						};
+						document.onmouseup = (e) => {
+							console.log("停止")
+							document.onmousemove = null;
+							document.onmouseup = null;
+						};
+					},
+					handleAdd(item,index){
+						this.imgList[index].isShow = false;
+						this.list.push(this.data[item.dataIndex])
+					},
+					handleClose(item,index){
+						this.list.splice(index,1)
+						const left = this.imgList[item.imgIndex].left
+						const bottom = this.imgList[item.imgIndex].bottom
+						
+						this.imgList[item.imgIndex].left = left
+						this.imgList[item.imgIndex].bottom = '110vh'
+						this.imgList[item.imgIndex].isShow = true
+						
+						setTimeout( () => {
+							this.imgList[item.imgIndex].left = left
+							this.imgList[item.imgIndex].bottom = bottom
+						},10)
+						console.log(this.imgList[item.imgIndex])
+						console.log(index)
+					},
+					goHome(){
+						location.href ='index.html'
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

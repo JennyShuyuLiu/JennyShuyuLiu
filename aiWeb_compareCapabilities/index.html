@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="./css/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="content">
+			<div class="flex-normal header">
+				<div class="left">
+					<img src="./images/AI.svg" />
+				</div>
+				<div class="flex-normal nav">
+					<div class="nav-item">Frontpage</div>
+					<div class="nav-item">Glossary</div>
+					<div class="nav-item">About</div>
+				</div>
+			</div>
+			<div class="intro">
+				A very high level overview of the whole site. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+			<div class="flex-normal home">
+				<div class="flex-normal play-page home-item jump" onclick="goPage()">
+					Play
+				</div>
+				<div class="flex-normal locate-page home-item jump" onclick="goPage()">
+					<div class="locate-text">Locate</div>
+					<img src="./images/Polygon.svg" />
+				</div>
+				<div class="flex-normal explore-page home-item jump" onclick="goPage()">
+					<div class="text">Explore</div>
+					<img src="./images/Union.svg" />
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function goPage(){
+				location.href = 'play.html'
+			}
+		</script>
+	</body>
+</html>
